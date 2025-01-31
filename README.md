@@ -87,7 +87,7 @@ Built using Twine with the Harlowe 3.3.9 story format.
 
 ## Historical Context
 
-The game is based on real events from the 2022 Russian invasion of Ukraine, specifically the Battle of Kyiv and the occupation of Irpin. The narrative incorporates actual historical events, while presenting them through the lens of civilian experience.
+The game is based on real events from the 2022 Russian invasion of Ukraine, specifically the Battle of Kyïv and the occupation of Irpin. The narrative incorporates actual historical events, while presenting them through the lens of civilian experience.
 
 ## Content Warning
 
