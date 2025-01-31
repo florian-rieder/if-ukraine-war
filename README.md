@@ -43,7 +43,7 @@ The story unfolds over five critical days during the invasion:
 ### Day 5: Aftermath
 - Dealing with losses
 - Final decisions about staying or leaving
-- Coming to terms with the new reality
+- Coming to terms with the new reality of ongoing war
 
 ## Key Characters
 
@@ -77,15 +77,11 @@ The game explores several complex themes:
 
 ## Technical Details
 
-Built using Twine with the Harlowe 3.3.9 story format. The game uses various Twine/Harlowe features including:
-- Variables to track player choices and their consequences
-- Conditional text display
-- Multiple story paths
-- State tracking for inventory and character relationships
+Built using Twine with the Harlowe 3.3.9 story format.
 
 ## Installation & Playing
 
-1. Open the .html file in a web browser
+1. Open the `story.html` file in a web browser
 2. Follow the text prompts and make choices by clicking on the links
 
 
