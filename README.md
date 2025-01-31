@@ -2,6 +2,8 @@
 
 An interactive fiction experience that puts you in the shoes of a shopkeeper in Irpin, Ukraine, during the Russian invasion in February 2022. This project was created as part of the Interactive Fiction class given by Isaac Pante (SLI, UNIL).
 
+![Image](https://github.com/user-attachments/assets/2be0ad3d-8bad-4175-ba33-acd1eefb7804)
+
 ## Overview
 
 You play as a shopkeeper in the city of Irpin during the Kyïv offensive (February 24, 2022 - April 6, 2022). The game explores daily life as it gradually transforms under the shadow of war, challenging players with moral choices and the ultimate decision: should you stay or should you go?
