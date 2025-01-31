@@ -1,0 +1,1243 @@
+:: StoryTitle
+Ukraine-shopkeeper
+
+
+:: StoryData
+{
+  "ifid": "223A69AF-5BC7-4D37-8039-7910F18BAF6F",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: AD5A {"position":"6325,550","size":"100,100"}
+Alexandra Bodovora: Thank you. Not many people understand. I will live for him; keep fighting for what he believed in, that way he will be with us always.
+
+> (link-goto: "As long as our nation is alive, then those whose sacrifice have forged it will live on. *Slava Ukraini*", "AlexandraD5Understand")
+
+
+:: AD5B {"position":"6450,550","size":"100,100"}
+Alexandra Bodovora: He died a noble death, he’s a hero... Of course I am sad, but also proud. My son is an innocent, I will fight for him until my last breath.
+
+> (link-goto: "I cannot understand your pain, but I implore you to rethink your decision to stay here... please Alexandra, you don’t deserve to die too. They're still evacuating civilians... There may not be another chance.", "AlexandraD5ProposeLeave")
+<br>
+> (link-goto: "I understand. Whatever may come, good luck.", "AlexandraD5Understand")
+
+
+:: AfterHit {"position":"5575,1625","size":"100,100"}
+Soldier: Now let's try this again: give us the boy's name.
+(set: $beatUp to $beatUp + 1)(if: $beatUp > 5)[
+You want it to stop.
+](else-if: $beatUp is 5)[
+You want it to stop.
+](else-if: $beatUp is 4)[
+It hurts a lot.
+](else-if: $beatUp is 3)[
+It hurts.
+](else-if: $beatUp is 2)[
+You fall to the ground.
+](else:)[<br>
+](if: $beatUp > 5)[
+(link-goto:"Pass out.", "EndInterruptionPassOut")
+](else-if: $beatUp > 4)[
+> (link: "His name is Ben Hassim.")[
+(set: $betrayedBenHassim to true)
+(go-to:"EndInterruptionBeatUp")
+]<br>
+> (link-goto: "I don't remember his name.", "InterrogationLie")
+](else:)[> (link-goto: "I don't remember his name.", "InterrogationLie")
+<br>
+> (link: "...His name is Ben Hassim.")[
+(set: $betrayedBenHassim to true)
+(go-to:"EndInterruptionBeatUp")
+]
+]
+
+
+:: Alexandra2 {"position":"1000,500","size":"100,100"}
+Alexandra Bodovora: Oh it's dreadful, just absolutely awful... those people are beastly! 
+
+> (link-goto: "What is the matter ?", "Alexandra3")
+
+
+:: Alexandra3 {"position":"1000,600","size":"100,100"}
+Alexandra Bodovora: It's Stefan, the poor dear just got his first job last month, and they just fired him for nothing at all! All he did was raise his voice a little at his boss... but you know how young men are, right? I tried to go talk to the manager, but they told me he has anger issues. Can you believe such a ridiculous thing? My son is an angel, and he deserves better than a crummy old job. I'm going to try to get him to get a degree... that way he can be the one to boss those no good idiots around!
+
+> (link-goto:"Ha, that's a smart plan! I always say the world has gotten too hard on young boys, at least your son has character.", "ReassureAlexandra")
+<br>
+> (link-goto:"Well, Alexandra... I know you mean well, but I've known you and your son for a while, and he can be a bit hot-headed. Maybe you should let him learn from his mistakes... this time at least?  ", "ConfrontAlexandra")
+
+
+:: AlexandraD3A {"position":"4800,500","size":"100,100"}
+Alexandra Bodovora: Then you must give him all my thanks, for giving my son's life purpose when he most needed it.
+
+(link-goto: "She pays and leaves.", "EndDay3")
+
+
+:: AlexandraD3B {"position":"4900,500","size":"100,100"}
+Alexandra Bodovora: My son will come back a hero, or not at all. Don't worry, I know he is brave, and I pray everyday to keep him safe.
+
+(link-goto: "She pays and leaves.", "EndDay3")
+
+
+:: AlexandraD3C {"position":"5000,500","size":"100,100"}
+Alexandra Bodovora: I am... But secretly I am so worried that those beasts might hurt my dear baby. I will be happiest when this is all over and he is returned to me.
+
+(link-goto: "She pays and leaves.", "EndDay3")
+
+
+:: AlexandraD3Start {"position":"4850,250","size":"100,100"}
+17:00 - Alexandra Bodovora arrives.
+
+> (link-goto: "Good Afternoon Miss Bodovora, you seem in high spirits today.", "AlexandraD3_1")
+
+
+:: AlexandraD3_1 {"position":"4850,375","size":"100,100"}
+Alexandra Bodovora: I'm here to celebrate; my son has joined the resistance and I've never been so proud of him! Give me everything sweet and any spirits you have left... Tomorrow he will go to war.
+
+(if: $HasFlyer is true)[(She notices the flyer)
+
+Alexandra Bodovora: And I see you too understand the importance of this, congratulations on doing your bit in helping to save our country. These flyers are a wonderful idea.
+
+> (link-goto: "Actually they were made by a good friend of mine, a smart young man named Alexander Ben Hassim that has been searching for his place in this war.","AlexandraD3A" )
+](else:)[What do you think, aren't you proud of my boy?
+
+> (link-goto:"Of course I am... But aren't you worried for his safety? What if something, god forbid, were to happen to him?", "AlexandraD3B")
+<br>
+> (link-goto:"Your son is the hero we all aspire to be, you must be the proudest of mothers !", "AlexandraD3C")
+]
+
+
+:: AlexandraD51 {"position":"6375,425","size":"100,100"}
+Alexandra Bodovora: They were preparing for an ambush, then the fighting began... they say it was over before it even began, that they shot right through his lung. He would have fought for his country and died alone, suffocating in the mud! Those monsters shot him before he even got a chance to fight... to live...
+
+> (link-goto: "Death is always ugly, but your son was a true hero, and his name will not be forgotten. You have given us the greatest gift and most bitter sacrifice, I cannot begin to thank you enough, or comprehend your sorrow.", "AD5A")
+<br>
+> (link-goto:"It is a tragedy... A horrible, meaningless loss. All my condolences.", "AD5B")
+
+
+:: AlexandraD5ProposeLeave {"position":"6450,675","size":"100,100"}
+Alexandra Bodovora: My memories live here... They took my son, but I won’t let them take my home. Good luck, and may we meet again.
+
+(link-goto: "She leaves.", "LunaD5Start")
+
+
+:: AlexandraD5Start {"position":"6375,300","size":"100,100"}
+10:00 - You see Alexandra Bodovora arrive. She looks devastated.
+
+
+Alexandra Bodovora: He is dead. My son is dead.
+
+> (link-goto: "Oh dear, what happened?", "AlexandraD51")
+
+
+:: AlexandraD5Understand {"position":"6325,675","size":"100,100"}
+Alexandra Bodovora: Thank you. Good luck to you, and may we meet again.
+
+(link-goto: "She leaves.", "LunaD5Start")
+
+
+:: AlexandraStart {"position":"1000,300","size":"100,100"}
+10:00 - A customer arrives.
+
+> (link-goto:"Good morning madam Bodovora, how are things going today?", "Alexandra2")
+
+
+:: BenHassim1 {"position":"3100,400","size":"100,100"}
+Alexander Ben Hassim: I was just coming for some food... but on the way here I saw... she was lying face down... A child... Killed by a missile. They are monsters.
+
+> (link-goto: "I'm scared too Alex, I just wish there was something I could do to protect my friends.", "BenHassim2")
+
+
+:: BenHassim2 {"position":"3100,500","size":"100,100"}
+Alexander Ben Hassim: So do I... I feel helpless in the midst of all of this.
+
+> (link-goto: "It's not your job to worry about everyone, the government will take care of us. In the meantime, try not to worry too much", "BenHassim3")
+<br>
+> (link-goto: "None of us is completely helpless. I am sure you can find your own way to contribute.", "BenHassim3")
+
+
+:: BenHassim2Accept {"position":"4175,550","size":"100,100"}
+Alexander Ben Hassim: You are a true brother, and a hero of the people.
+
+(link:"He leaves.")[
+(set: $HasFlyer to true)
+(go-to:"LunaD3Start")
+]
+
+
+:: BenHassim2Refuse {"position":"4275,550","size":"100,100"}
+Alexander Ben Hassim: I understand... No hard feelings, I know your sympathies lie with us, but it was unfair of me to ask so much of you.
+
+(link:"He leaves.")[
+(set: $HasFlyer to false)
+(go-to:"LunaD3Start")
+]
+
+
+:: BenHassim2Start {"position":"4225,250","size":"100,100"}
+14:00 - Alexander Ben Hassim arrives.
+
+> (link-goto: "Oh, hello Alexander.", "BenHassim2_1")
+
+
+:: BenHassim2_1 {"position":"4225,350","size":"100,100"}
+Alexander Ben Hassim: I thought a lot about what you told me... and I figured out what to do!
+
+> (link-goto:"That's wonderful, it's important to keep busy right now... with everything going on.", "BenHassim2_2")
+
+
+:: BenHassim2_2 {"position":"4225,450","size":"100,100"}
+Alexander Ben Hassim: That's exactly why I organized this group of resistance fighters, to protect civilians like yourself and fight for our freedom. I even had some flyers made, and I want to put them up everywhere so all the young men can do their bit too. Sooo, do you mind if I put up some of my flyers in your window? You would be doing the cause a great service if you accepted my offer.
+
+> (link-goto:"I'm sorry my friend, but I'm an old man, all alone in this shop... and those little flyers of yours are going to paint a target right onto the front of my shop.", "BenHassim2Refuse")
+<br>
+> (link-goto:"It's not without risk, but I must help out however possible. Yes, you can put them up, but be careful, this is not a game.", "BenHassim2Accept")
+
+
+
+:: BenHassim3 {"position":"3100,600","size":"100,100"}
+(link-goto: "He smiles, pays and leaves.", "MikhailStart")
+
+
+:: BenHassimStart {"position":"3100,275","size":"100,100"}
+12:00 - You see a young man, who you recognize to be Alexander Ben Hassim, a student who lives a few blocks away.
+
+> (link-goto: "Hello Alexander, what can I do for you today?", "BenHassim1")
+
+
+:: BetrayedBeatUp {"position":"5550,2025","size":"100,100"}
+Vlad: War is hell. At least you're alive. Besides, I never did like that Ben Hassim character, he’s a real know it all.
+
+> (link-goto: "He doesn’t deserve to die... How can you be so cold ?", "Drink1")
+
+
+:: BetrayedSafe {"position":"5675,2050","size":"100,100"}
+Vlad: War is hell. At least you are okay. Besides, I never did like that Ben Hassim character, he’s a real know it all.
+
+> (link-goto: "He doesn’t deserve to die... How can you be so cold ?", "Drink1")
+
+
+:: ConfrontAlexandra {"position":"1075,750","size":"100,100"}
+Ms. Bodovora: Huh, I see. Well at least my son is around, when did you last speak to your daughter eh?
+
+> (link-goto: "It's been... weeks.", "ConfrontAlexandra1")
+
+
+:: ConfrontAlexandra1 {"position":"1075,875","size":"100,100"}
+Ms. Bodovora: Look, I didn't mean it like that... But you know, I'm a mama bear, ever since... you know, since I've been alone, I've wanted to protect him and make him strong.
+
+
+> (link:"I understand, we are both doing what we think is best...")[I understand, we are both doing what we think is best...<br>
+(link-goto:"She pays for her groceries and leaves.", "LunaStart")]
+
+
+:: D4Interruption {"position":"5475,1275","size":"100,100"}
+As you begin to emerge from the basement, you hear a crashing noise. You cautiously approach the shop's entrance.
+
+Five Russian soldiers stand in your shop, picking what they might from your stalls.
+
+> (link-goto:"Hey, you broke my door!", "SoldiersConfront")
+<br>
+> (link-goto:"Welcome to my humble corner shop, what might I get you?", "SoldiersConfront")
+
+
+:: Danya1 {"position":"3700,350","size":"100,100"}
+Danya Kovalenko: Well... please don't tell anyone, but I need an emergency bag.
+
+> (link-goto: "I'm sorry to meddle but... are you sure? I met your husband the other day and he told me you all planned to stay and protect the farm, he will be heartbroken to leave it", "Danya2")
+
+
+:: Danya2 {"position":"3700,450","size":"100,100"}
+Danya Kovalenko: That's why it's a secret... I don't think Mik will want to join us, and I won't let him stop us. I heard gunfire last night, and I won't allow for my babies to get hurt.
+
+(link:"...")[Stella Kovalenko: Daddy says it's our job to protect the farm. I'm going to be strong like him. I'm a Ukrainian!
+
+(link:"...")[Danya Kovalenko: Please...
+
+> (link-goto:"I'll do what I can to help, here.", "DanyaAccept")
+<br>
+> (link-goto:"Why don't you talk about it with Mikhail ?", "DanyaRefuse")
+
+]
+]
+
+
+:: DanyaAccept {"position":"3800,575","size":"100,100"}
+Danya Kovalenko: Thank you for understanding.
+
+
+(link-goto: "She pays and leaves with her daughter.", "NinaD3Start")
+
+
+:: DanyaRefuse {"position":"3650,575","size":"100,100"}
+Danya Kovalenko: I have, but he's not listening to me. Still, thank you for the bag.
+
+(link-goto: "She pays and leaves with her daughter", "NinaD3Start")
+
+
+:: Day3Start {"position":"3700,250","size":"100,100"}
+**27 february 2024**
+
+After the initial shock of the air raids and Russian army incursion on Ukraine's territory, the fighting is getting closer to Irpin. You can hear the firefights in Bucha, just a few kilometers away.
+
+Even then, you see Danya Kovalenko and her daugter coming to the shop.
+
+> (link-goto:"Good morning Danya and Stella, what can I do for you today?", "Danya1")
+
+
+:: Day4Start {"position":"5500,275","size":"100,100"}
+**28 february 2022**
+
+Since yesterday, the Russians have advanced into Irpin. You've been sleeping in the basement for weeks, it helps you feel safe. You can hear the fighting going on all around. You haven't seen any soldiers yet, but you know they are close.
+
+(set: $betrayedBenHassim to false)
+> (link: "Open the shop as usual.")[
+(go-to: "Day4StartOpen")
+]
+<br>
+> (link: "Stay put.")[
+(go-to: "Day4StartClosed")
+]
+
+
+:: Day4StartClosed {"position":"5450,400","size":"100,100"}
+You stay in the basement, decided to wait it out. You have enough to eat and drink for a little while.
+
+However, you quickly hear banging on the front door.
+
+(link-goto: "Go upstairs.", "Day4StartClosed_2")
+
+
+:: Day4StartClosed_2 {"position":"5450,500","size":"100,100"}
+As you approach the door, you see it's your friend Vlad.
+
+Vlad: Open ! Quick ! The Russians are here !
+
+> (link-goto: "Your Russian friends are causing quite a ruckus outside, huh?", "VladD41")
+
+
+:: Day4StartOpen {"position":"5550,400","size":"100,100"}
+As you open the door, you see Vlad, out of breath, rushing towards you. He pushes you inside and closes the door.
+
+Vlad: What is wrong with you? The Russians are here! You can’t be open today!
+
+> (link-goto:"I guess you are right... Your Russian friends are causing quite a ruckus outside, huh?", "VladD41")
+<br>
+> (link-goto:"My door has always been open, no matter what is going on out there. I’m not going to start disappointing my regulars when they need me most.", "VladD41")
+
+
+:: Day5Start {"position":"6050,275","size":"100,100"}
+**3rd march 2022**
+
+After the violent combats all around the shop, the ukrainian army managed to push the Russian forces out of Irpin and Bucha. They discover the massacre that unfolded there.
+
+Your neighborhood is almost unrecognizable. The house across the street was destroyed with an artillery shell. It could have been you.
+
+You're busy repairing the door of your shop, when you see Mikhail Kovalenko arrive.
+
+> (link-goto:"Good day, how are you doing?", "MikhailD51")
+
+
+:: Drink1 {"position":"5675,2175","size":"100,100"}
+Vlad: As I said, war is hell. You didn’t deserve to be looted(if:$beatUp > 0)[ and beat up], but I know how to deal with all this ugliness. Look, I hid some vodka down here, behind your fridge... y’know, for emergencies.
+
+> (link-goto:"What is wrong with you? The world is ending around us, we are surrounded by enemies, and you want to open another bottle!?", "Drink2")
+
+
+:: Drink2 {"position":"5525,2300","size":"100,100"}
+Vlad: Listen to me. When your life imploding on itself, there is no better cure than a deck of cards, a large bottle and a friendly face! Come, let’s keep living how we’ve always lived, until we can’t anymore.
+
+> (link-goto:"Do you really want to live like this?", "Drink3")
+
+
+:: Drink3 {"position":"5525,2400","size":"100,100"}
+Vlad: This is where you belong. besides, who will I play against if you leave?
+
+> (link-goto:"But my shop is destroyed... there is nothing left for me here. I’m thinking of leaving...", "Drink4")
+
+
+:: Drink4 {"position":"5525,2500","size":"100,100"}
+Vlad: *Na zdoróvʹje* my friend, to whatever path you choose.
+
+> (link-goto: "Na zdoróvʹje, my friend...", "EndDay4")
+
+
+:: End {"position":"7125,300","size":"100,100"}
+> (link-goto: "Leave Ukraine.", "LeaveUkraine")
+<br>
+> (link-goto: "Stay", "EndStay")
+
+
+:: EndDay1 {"position":"2250,300","size":"100,100"}
+That's it. No one else is coming today. While closing the shop, you think about the danger, if a war is really brewing. If it happens, what will you do ? It's always good to be prepared.
+
+[[Prepare an emergency suitcase]]
+
+
+:: EndDay3 {"position":"5250,275","size":"100,100"}
+As the day comes to a close, you can hear the combat continue in the distance. You call your daughter, in Berlin. She is safe. She begs you to come join her.
+
+You think about your shop. (if: $extra_refill is false)[Your stocks are dwindling.](else:)[You still have some stock, but it won't last forever.] The people here need you.
+
+
+> (link-goto: "Leave Ukraine.", "LeaveUkraine")
+<br>
+> (link-goto: "Stay", "Day4Start")
+
+
+:: EndDay4 {"position":"5850,275","size":"100,100"}
+> (link-goto: "Leave Ukraine.", "LeaveUkraine")
+<br>
+> (link-goto: "Stay", "Day5Start")
+
+
+:: EndInterruptionBeatUp {"position":"5525,1775","size":"100,100"}
+The soldiers finally leave. Your whole body hurts, and they still took whatever they wanted. As you're contemplating the situation, you hear Vlad's voice from the stairwell.
+
+Vlad: What happened up there?
+(set: $passedOut to false)
+> (link-goto: "Some soldiers showed up and stole everything I had left... They beat me up, and I’m completely ruined now.", "Looters1")
+
+> (link-goto: "I betrayed my friend... And they still stole everything.", "BetrayedBeatUp")
+
+
+
+:: EndInterruptionPassOut {"position":"5400,1775","size":"100,100"}
+You wake up in pain. The cold neon light of your basement blinds you.
+
+Vlad: You’re finally awake! What did those awful rioters do to you? I head a loud noise and came up straight away!  I found you on the ground, unconscious. I was afraid... you wouldn’t wake up.
+(set: $passedOut to true)
+> (link-goto: "Rioters, Vlad? Is that what you think? I was lucky enough to receive a visit from our lovely Russian allies. Your friends up there took everything I had left...", "Looters1")
+
+
+:: EndInterruptionSafe {"position":"5675,1775","size":"100,100"}
+The soldiers finally leave. Your store is in bad shape, but at least you're safe. As you're contemplating the situation, you hear Vlad's voice from the stairwell.
+
+Vlad: What happened up there?
+(set: $passedOut to false)
+> (link-goto: "Some soldiers showed up and stole everything I had left...they didn’t hurt me, but I’m completely ruined now.", "Safe1")
+
+
+:: EndStay {"position":"7275,300","size":"100,100"}
+You join Vlad at his place.
+
+Vlad: "Ah, my friend, come to say goodbye ?"
+
+> (link-goto: "I'm staying. Let's raise a glass to the new normal. There is plenty to do here.", "EndStay2")
+
+
+:: EndStay2 {"position":"7400,300","size":"100,100"}
+The war is far from over. The threat of missiles and bombs still looms over your head, but you managed to keep your spirits high. You don't know what the future holds, but you will help rebuild it.
+
+(link-goto: "The end.", "Start")
+
+
+:: GiftLollipop {"position":"1200,550","size":"100,100"}
+Gabi Luna: Thank you thank you! You know, ever since we moved here, you’ve been so nice to me and my boy, and now you made our day!
+
+(link-goto:"She pays for the rest of her groceries and leaves with her son.", "NinaStart")
+
+
+:: InterrogationLie {"position":"5450,1625","size":"100,100"}
+Soldier: Are you sure? It would be a shame if you were lying to us.
+
+(link-goto: "He hits you.", "AfterHit")
+
+
+
+:: KovalenkoFamily {"position":"1725,425","size":"100,100"}
+Danya Kovalenko: Great!
+
+(link:"...")[Mikhail Kovalenko: Well... everyone has their own little issues don't they?
+
+(link-goto:"Of course... is Stella having trouble at school? She is so sweet, I hope no one is picking on her.", "KovalenkoFamily2")]
+
+
+:: KovalenkoFamily2 {"position":"1725,525","size":"100,100"}
+Danya Kovalenko: Actually it's Peter...
+
+
+(link-goto:"Oh I see, but I thought he was done with school, working on the farm with you Mikhail.", "KovalenkoFamily3")
+
+
+:: KovalenkoFamily3 {"position":"1725,625","size":"100,100"}
+Mikhail Kovalenko: He is... but he doesn't seem to like it, he keeps talking about some fancy art school in Strasbourg... He even said he wanted a better life than me and my father and his father... Whatever that means.
+
+(link:"...")[Danya Kovalenko: Well he is young, still figuring things out. Of course we'd love for him to stay, but...
+
+(link:"...")[Mikhail Kovalenko: But nothing, he's just having a little teenage tantrum, that's all.
+
+> (link:"It would sure be a shame for the farm's legacy to be lost, I hope it works out for all of you.")[It would sure be a shame for the farm's legacy to be lost, I hope it works out for all of you.<br>
+(link-goto:"They pay for their groceries and leave.", "LennyStart")]]]
+
+
+:: KovalenkoFarm {"position":"1850,425","size":"100,100"}
+Mikhail Kovalenko: Not yet, but as soon as the ground thaws properly we will be back at it, as always.
+
+(link-goto:"I sure hope so. My pops used to send me to get his eggs from your father, the Kovalenko farm is a landmark of our town.", "KovalenkoFarm2")
+
+
+:: KovalenkoFarm2 {"position":"1850,525","size":"100,100"}
+Mikhail Kovalenko: I remember... you were young then, about as old as Peter is now as a matter of fact!
+
+(link-goto: "And you were only a small boy, but already so eager to follow in your father's footsteps.", "KovalenkoFarm3")
+
+
+:: KovalenkoFarm3 {"position":"1850,625","size":"100,100"}
+Mikhail Kovalenko: As any boy would. Now, let's get some supplies and head back to work, Danya has promised us all warm apple cake when Peter and I finish up repairing the barn roof.
+
+(link-goto:"They pay for their groceries and leave.", "LennyStart")
+
+
+:: KovalenkoStart {"position":"1800,300","size":"100,100"}
+17:00 - A couple enters. It's Danya and Mikhail Kovalenko, a farmer family who lives nearby.
+
+
+> (link:"Well good afternoon to you both. How is my favourite family?")[
+(set: $family_choices to $family_choices + 1)
+(go-to:"KovalenkoFamily")
+]
+<br>
+> (link-goto:"Danya, Mikhail! how is the farm? almost time to start planting I bet.", "KovalenkoFarm")
+
+
+:: LeaveUkraine {"position":"5350,0","size":"100,100"}
+You chose to leave Ukraine and flee the war, like millions of other refugees.
+
+
+(link-goto: "End.", "Start")
+
+
+:: Lenny1 {"position":"2050,425","size":"100,100"}
+Lenny: Why the face, my friend, aren’t you happy to see your old pal Lenny?
+
+> (link-goto:"Oh it's all this bother on the news, it's enough to get anyone feeling nervous", "Lenny2")
+(if: $family_choices >= 2)[
+> (link-goto: "Well... Some of my customers are having a hard time, I'm not made of stone. Besides... the news.", "Lenny2")
+]
+
+
+:: Lenny2 {"position":"2050,525","size":"100,100"}
+Lenny: Ah yes... the news. Since you are one of my best clients, there's something we should discuss.
+
+> (link-goto:"What is it ?", "Lenny3")
+
+
+:: Lenny3 {"position":"2050,625","size":"100,100"}
+Lenny: Well... I hear there is a war coming, a real one this time. So I'm getting ready.
+
+> (link-goto:"You mean you're gonna run away?", "Lenny4")
+
+
+:: Lenny4 {"position":"2050,725","size":"100,100"}
+Lenny: Haha, not even close, but I am going to make sure me and my own are well protected during this difficult time... that's why I am coming to you with an idea.
+
+> (link-goto:"What do you mean..?", "Lenny5")
+
+
+:: Lenny5 {"position":"2050,825","size":"100,100"}
+Lenny: Alright, listen up. I can offer you a bigger restock this time: 150% instead of the usual. No extra charge today. But here’s the thing. I had to pull some favors to get this much. If you take the extra stock, I need to know you’ll be able to cover my costs down the line. That means you’ll have to **bump up your prices** a little—just enough to keep things steady. Otherwise, I can’t afford to keep doing you favors like this.
+
+> (link:"Well... I’m not sure about this whole war thing, but I can’t let my clients starve. Better to have more than not enough. (Take 150%, increase prices)")[
+(set: $stock to 150)
+(set: $extra_refill to true)
+(go-to: "LennyIncrease")
+]
+<br>
+> (link: "You’re trying to use a crisis to exploit people? That’s not the kind of business I want to run. (Take the regular shipment, keep current prices)")[
+(set: $stock to 100)
+(set: $extra_refill to false)
+(go-to: "LennyCallout")
+]
+
+
+:: LennyCallout {"position":"2000,1025","size":"100,100"}
+Lenny: You're a better man than I am, always looking out for those little clients of yours. Well, goodnight and good luck!
+
+(link-goto:"Lenny leaves.", "EndDay1")
+
+
+:: LennyIncrease {"position":"2125,1025","size":"100,100"}
+Lenny: That's the spirit. We need to survive. See you around.
+
+(link-goto:"Lenny leaves.", "EndDay1")
+
+
+:: LennyStart {"position":"2050,300","size":"100,100"}
+19:00 - As you're getting ready to close the shop, a man enters. It's Lenny, your shop's supplier.
+
+
+(link-goto:"Is it restocking time already?", "Lenny1")
+
+
+:: Looters1 {"position":"5400,1900","size":"100,100"}
+Vlad: Are you sure? Y’know, maybe you were mistaken... I heard on the news that violent looters are roaming the streets.
+
+> (link-goto: "Are you blind or just drunk? You know as well as I do who those men were. Well Vlad, do you feel protected? Is all this what you wanted all along?", "Looters2")
+
+
+:: Looters2 {"position":"5400,2000","size":"100,100"}
+Vlad: Look, politics are one thing... What those brutes did to you is quite another. I promise you, you are my friend, and anyone who comes after my friend is my enemy forever. Besides, hurting an unarmed civilians is unbecoming of any man... I am truly sorry.
+
+> (link-goto: "That’s a lovely sentiment, but my shop is ransacked, completely destroyed. I'm ruined.", "Ruined")
+
+
+:: Luna1 {"position":"1275,425","size":"100,100"}
+Gabi Luna: I am so tired! The little one's been sick all week and I haven't even had time to do laundry or find a new job... I'll just get some milk and flour today
+(link:"...")[... Sunny put that lollipop down! We can't afford that right now. <br>
+
+> (link:"Hey Sunny, why don't you keep that treat. Don't worry Miss Gabi, you'll get back on your feet soon enough, and you're doing great with your son.")[
+(set: $generous_choices to $generous_choices + 1)
+(set: $stock to $stock - 10)
+(go-to:"GiftLollipop")
+]
+<br>
+> (link-goto: "I'm so sorry to hear that. Times are hard for everyone, don't you have any family that could help?", "NoGiftLollipop")
+]
+
+
+:: LunaD3End {"position":"4550,550","size":"100,100"}
+She says nothing more, thinking about what you said.
+
+(link-goto:"She leaves.", "AlexandraD3Start")
+
+
+:: LunaD3GiveWater {"position":"4500,450","size":"100,100"}
+Gabi Luna: You are my hero, I will always be safe here as long as you are around... I will tell Sunny what you did for us when he is old enough to thank you.
+
+> (link: "You know... Perhaps you would be safer away from all this. The fighting is close now...")[
+(set: $ToldLunaToLeave to true)
+(go-to:"LunaD3End")
+]
+
+> (link:"Now, dry your tears my dear, and go be with your son, he must be terrified. I will always be here for you both.")[
+(set: $ToldLunaToLeave to false)
+(go-to: "LunaD3End")
+]
+
+
+:: LunaD3NoWater {"position":"4600,450","size":"100,100"}
+Gabi Luna: But where should I go? I could get killed on the way out, and there is no one to help us.
+
+> (link: "Perhaps you could return to your family in Russia... I'm sure they will be so glad to see you alive and safe that they are sure to accept your son. You must think of what is best for him...")[
+(set: $ToldLunaToLeave to true)
+(go-to:"LunaD3End")
+]
+
+> (link:"Maybe I'm overreacting. I'm sure the war will be over soon. We're a strong people, we'll endure this !")[
+(set: $ToldLunaToLeave to false)
+(go-to: "LunaD3End")
+]
+
+
+:: LunaD3Start {"position":"4525,250","size":"100,100"}
+16:00 - You see Gabi Luna enter. She's alone and agitated.
+
+Gabi Luna: "Oh help, please help me, you're my last hope."
+
+> (link-goto:"Gabi? Why are you crying? And where is Sunny??", "LunaD3_1")
+
+
+:: LunaD3_1 {"position":"4525,350","size":"100,100"}
+Gabi Luna: He's with my neighbour, but it doesn’t matter, they bombed my building, and we have no clean water to make his formula with.... Oh please help, I am so scared.
+
+(if: $AllWaterSold is false)[
+> (link-goto:"Here are some bottles of water, now take a deep breath my dear, we will make it through this together.", "LunaD3GiveWater")](else:)[
+> Here are some bottles of water, now take a deep breath my dear, we will make it through this together. ''(You have no more bottled water.)''
+]
+
+(if: $AllWaterSold is true)[
+> (link-goto:"I am so sorry... I am out of bottled water. Here is some I was keeping for myself today, but you must leave, it's not safe for a young lady and her baby around these parts.", "LunaD3NoWater")](else:)[
+> I am so sorry... I am out of bottled water. Here is some I was keeping for myself today, but you must leave, it's not safe for a young lady and her baby around these parts. ''(You still have bottled water.)''
+]
+
+
+
+:: LunaD51 {"position":"6700,425","size":"100,100"}
+Gabi Luna: Thank you, it’s been really scary for him... and me.
+
+> (link-goto:"I understand. What can I do for you?", "LunaD52")
+
+
+:: LunaD52 {"position":"6700,550","size":"100,100"}
+Gabi Luna: Actually, I wanted to come by to thank you for helping me out, and to ask you if you wanted to come with us.
+
+> (link-goto: "Come with you? Where to?", "LunaD53")
+
+
+:: LunaD53 {"position":"6700,650","size":"100,100"}
+Gabi Luna: Anywhere but here. There’s a group of us leaving tonight, please say you’ll join us.
+
+> (link-goto:"But what about my shop? My whole life is here.", "LunaD54")
+
+
+:: LunaD54 {"position":"6700,750","size":"100,100"}
+Gabi Luna: Look around you, everything is destroyed... Haven’t you heard what happened to Stefan Bodovora? And my building came down a few days ago, and they are still counting the dead! We're lucky to be alive.
+
+> (link-goto: "I have to stay for the survivors, whatever may come. It’s small, but my duty is to this neighbourhood, doing my part as long as I can.", "LunaD55")
+
+
+:: LunaD55 {"position":"6700,850","size":"100,100"}
+Gabi Luna: I know, it's a difficult decision to make. Take your time, but the bus leaves tonight. I hope this isn't goodbye...
+
+(link-goto:"She smiles and leaves.", "VladD5Start")
+
+
+:: LunaD5Start {"position":"6700,300","size":"100,100"}
+12:00 - You see Gabi Luna arrive.
+
+
+> (link-goto:"I’m so relieved to see you again. I thought... well when they came... I’m just so glad you and Sunny are alive.", "LunaD51")
+
+
+:: LunaStart {"position":"1275,300","size":"100,100"}
+12:00 - A young mother enters with her toddler.
+
+> (link-goto: "Oh Gabi, it's nice to see you, how are you holding up?", "Luna1")
+
+
+:: Mikhail2 {"position":"3300,350","size":"100,100"}
+Mikhail Kovalenko: That's the trouble with all of you, always talking about things lasting "a little while". Farms are forever. Family is forever.
+
+> (link-goto: "Did something happen to your farm? I thought you were far enough from the front to be safe.", "Mikhail3")
+
+
+:: Mikhail3 {"position":"3300,450","size":"100,100"}
+Mikhail Kovalenko: It's not the war... it's my wife.
+
+> (link-goto:"I should have suspected as much when you came in looking like you did, women troubles. But I saw you guys last week, what on earth could have changed since then?", "Mikhail4")
+
+
+:: Mikhail4 {"position":"3300,575","size":"100,100"}
+Mikhail Kovalenko: She says it's time to leave. She called me an idiot for putting my children in danger, but I love my home, and so do they. I'm doing this for them, to protect their future, doesn't she get that?
+
+(link: "...")[But nooo she wants to take the kids to Strasbourg, says it will give Peter an opportunity to thrive away from all this, and that at least there, Stella will be safe. Safe... safe is with me, in our farm, where I know the land and the people... there is nothing safer than home.
+
+> (link-goto:"Calm down Mikhail, perhaps things aren't as bad as they seem.", "Mikhail5")
+]
+
+
+:: Mikhail5 {"position":"3300,675","size":"100,100"}
+Mikhail Kovalenko: Well, my wife is acting all strange now... ever since I told her I would always stay, she has been quiet... and well... you know how she is usually. That's why I want to show her how safe our home is by making sure we are all stocked up on water... Are these the only bottles you have?
+
+> (link-goto: "There are a few more in the back.", "Mikhail6")
+
+
+:: Mikhail6 {"position":"3300,775","size":"100,100"}
+Mikhail Kovalenko: Great, I'll take the lot.
+
+> (link-goto: "Of course, anything to help your family in these difficult times.", "MikhailGiveWater")
+<br>
+> (link-goto: "Mikhail... you know I can't do that. What about the others? I have to make sure everyone can have at least a little clean water. You understand.", "MikhailRefuseWater")
+
+
+
+
+:: MikhailD51 {"position":"6050,400","size":"100,100"}
+Mikhail Kovalenko: My...my family is gone! They ran off to Poland in the middle of the night, my wife had warned me but ooh I didn’t listen and now they’re gone, gone! What have I done? I swore I would protect them and now... now I can’t. I choose this... I... I  choose to stay. I’m a monster, aren’t I?
+
+> (link-goto: "You made a difficult decision, but your family will thank you when this is all over, and they have a home to come back to.", "MikhailD5Appease")
+<br>
+> (link-goto: "You are not a monster. But I have to ask... Why are you still here? If you know where they are, maybe you should join them.", "MikhailD5Question")
+
+
+:: MikhailD5Appease {"position":"5975,525","size":"100,100"}
+Mikhail Kovalenko: Do you think they will come back?
+
+> (link-goto: "Of course they will. And you will be a hero to them and your country! There is no dishonour in having your family stay somewhere safe whilst you fight for their freedom, that is what men have been doing since the dawn of time.", "MikhailD5End")
+
+
+:: MikhailD5End {"position":"6025,775","size":"100,100"}
+Mikhail looks at you and nods.
+
+(link-goto: "He leaves.", "AlexandraD5Start")
+
+
+:: MikhailD5Question {"position":"6100,525","size":"100,100"}
+Mikhail Kovalenko: This is my home, this is the land of my father, and his father before him. I will not bring shame upon my ancestors.
+
+> (link-goto: "Mikhail... You are a proud man, and a strong one, but it wouldn't be shameful to protect oneself.", "MikhailD5Question2")
+
+
+:: MikhailD5Question2 {"position":"6100,650","size":"100,100"}
+Mikhail Kovalenko: I’ll fight till the end, whatever the odds.
+
+> (link-goto: "I understand you, but do you really want to leave your family alone ?", "MikhailD5End")
+<br>
+> (link-goto:"Good luck, Mikhail. You're a hero.", "MikhailD5End")
+
+
+:: MikhailGiveWater {"position":"3200,900","size":"100,100"}
+Mikhail Kovalenko: You are a hero, I am eternally grateful.
+
+(set: $AllWaterSold to true)
+
+(link-goto: "He pays and leaves.", "VladD2Start")
+
+
+
+:: MikhailRefuseWater {"position":"3350,900","size":"100,100"}
+Mikhail Kovalenko: Well how am I going to convince Danya that things are safe when we can't even buy enough water? If you don't help me, I'm afraid I won't be able to protect my family...
+
+(set: $AllWaterSold to false)
+(link-goto: "He pays and leaves, somewhat irritated.", "VladD2Start")
+
+
+:: MikhailStart {"position":"3300,250","size":"100,100"}
+15:00 - You see Mikhail Kovalenko approaching. He looks out of breath.
+
+Mikhail Kovalenko: Do you have any water left?
+
+
+(link-goto: "Hello Mikhail, take a breath, I have enough bottled water to last you and your family for a little while.", "Mikhail2")
+
+
+
+
+:: Nina1 {"position":"1525,425","size":"100,100"}
+Nina Melkova: I'm fit as a fiddle, thank you very much! These old bones of mine are solid. 
+<br>
+> (link-goto: "That's great to hear!", "NinaMundane")
+<br>
+> (link:"That's good to hear... So, have you spoken to your son recently? You know, with the news...")[
+(set: $family_choices to $family_choices + 1)
+(go-to:"NinaSon")
+]
+
+
+
+
+:: NinaD21 {"position":"2825,400","size":"100,100"}
+Nina Melkova: Don't be silly, there are no lottery tickets to scratch inside. Besides, exercise is key to living a long life.
+
+> (link-goto: "But aren't you worried about the sirens?", "NinaD22")
+
+
+:: NinaD22 {"position":"2825,500","size":"100,100"}
+Nina Melkova: Those things, ha, my son has been phoning so much that I can hardly hear them anymore.
+
+> (link-goto:"Nina... You know I care about you, right? We have known each other for decades, and I must be honest with you. Please, please listen to your son, and go be safe with your family.", "NinaD2Confront")
+<br>
+> (link-goto:"Perhaps they should invest in louder missiles if they want to get to you!", "NinaD2Encourage")
+
+
+:: NinaD2Confront {"position":"2750,625","size":"100,100"}
+Nina Melkova: I will see them for easter and then my son's birthday in June... I don't know why you are fussing too now, you are beginning to sound just like him.
+
+> (link-goto:"But these sirens... something bad is coming, I know as much. [...] I know how strong you are, but what if you get hurt, what if...", "NinaD2Confront2")
+
+
+
+:: NinaD2Confront2 {"position":"2750,750","size":"100,100"}
+Nina Melkova: If I die, is that it mister? We old people have been through this before, and if I'm still alive today. They won't get me tomorrow either!
+
+(link-goto:"She leaves, and doesn't even pay.", "BenHassimStart")
+
+
+:: NinaD2Encourage {"position":"2875,625","size":"100,100"}
+Nina Melkova: Or throw that damned phone away! Poor son of mine can't understand what it means to be a patriot like you do.
+
+(link-goto: "She gives you a tip and leaves", "BenHassimStart")
+
+
+:: NinaD2Start {"position":"2825,300","size":"100,100"}
+10:00 - Nina Melkova arrives, like every day.
+
+Nina Melkova: Well, looks like it's raining cats, dogs and missiles today!
+
+> (link-goto: "Miss Nina, what are you doing here? At your age you should be safely inside.", "NinaD21")
+
+
+:: NinaD31 {"position":"4000,350","size":"100,100"}
+Nina Melkova: What else would I be?
+
+> (link-goto:"I thought maybe you had taken up your son on his offer... you know, to go join him in Russia.", "NinaD32")
+
+
+:: NinaD32 {"position":"4000,450","size":"100,100"}
+Nina Melkova: I will die how I lived, proud on the land of my mother, her mother, and her mother before her.
+
+> (link-goto:"You are a hero, and I cannot help but admire your spirit.", "NinaD3Encourage")
+<br>
+> (link-goto:"What are you going to prove by dying? What about your granddaughter, who won't get to know you because of your stubbornness?", "NinaD3Confront")
+
+
+:: NinaD3Confront {"position":"3925,575","size":"100,100"}
+Nina Melkova: I thought you were one of us, but now I see you're a coward and a traitor. You know what, keep the tickets, you vile rat. My granddaughter will have a grandmother she can be proud of, unlike some.
+
+> (link-goto:"Nina, wait !", "NinaD3Confront2")
+
+
+:: NinaD3Confront2 {"position":"3925,675","size":"100,100"}
+(link-goto:"She leaves without even looking at you.", "BenHassim2Start")
+
+
+:: NinaD3Encourage {"position":"4050,575","size":"100,100"}
+Nina Melkova: I knew you'd understand. People like you are the reason I know I am right to stay, our people are brave and resilient.
+
+(link-goto:"She leaves.", "BenHassim2Start")
+
+
+:: NinaD3Start {"position":"4000,250","size":"100,100"}
+12:00 - You see Nina coming, as usual.
+
+> (link-goto: "Nina, I'm so happy you are okay!", "NinaD31")
+
+
+:: NinaMundane {"position":"1475,550","size":"100,100"}
+Nina Melkova: Well, to tell the truth...... my knees are playing up a bit, but I'm lucky your shop is right across the street! Do you have my lottos?
+
+(link-goto: "That's what I'm here for Ma'am! Do you think today's ticket is a winner?", "NinaMundane2")
+
+
+:: NinaMundane2 {"position":"1475,650","size":"100,100"}
+Nina Melkova: I hope so! Maybe that no good son of mine would move his family closer if I was rich... Oh drat, not today I guess.
+
+(link-goto:"There's always tomorrow ! Besides, I don't know what I'd do if you didn't come in anymore, you're my favorite customer!", "NinaMundane3")
+
+
+:: NinaMundane3 {"position":"1475,750","size":"100,100"}
+Nina Melkova: You old charmer... See you tomorrow.
+
+(link-goto:"Nina leaves.", "KovalenkoStart")
+
+
+:: NinaSon {"position":"1600,550","size":"100,100"}
+Nina Melkova: Now don't you start on that too! Nikolai is all up in a tizzy, trying to get me to move to Belgorod with his family and his witch of a wife! I'm perfectly capable of taking care of myself thank you very much.
+
+(link-goto:"But you have grandchildren, don't you miss them?", "NinaSon2")
+
+
+:: NinaSon2 {"position":"1600,650","size":"100,100"}
+Nina Melkova: Every day... you know how it is don't you? But I am not moving away from my home for anyone or anything, besides... I don't like those damned Russians one bit. Believe me, they are nothing but trouble.
+
+(link-goto: "Nina leaves.", "KovalenkoStart")
+
+
+:: NinaStart {"position":"1525,300","size":"100,100"}
+15:00 - A new customer arrives. It's Mrs. Melkova, a cheerful yet stubborn babushka who lives across the street. She comes regularly to buy lottery tickets and talk.
+
+> (link-goto: "Miss Nina, it's great to see you, how is my most loyal customer today?", "Nina1")
+
+
+:: NoGift2 {"position":"1350,675","size":"100,100"}
+Gabi Luna: He's the reason I left.
+
+> (link: "Well chin up, things are surely going to get better for us all, and especially for a lovely and intelligent young lady like yourself.")[Well chin up, things are surely going to get better for us all, and especially for a lovely and intelligent young lady like yourself. <br> 
+(link-goto:"She pays for her groceries and leaves with her son.", "NinaStart")
+]
+
+
+:: NoGiftLollipop {"position":"1350,550","size":"100,100"}
+Gabi Luna: No... They won't talk to me. I haven't seen my family since I came to Ukraine, and I'm never going back.
+
+(link-goto: "I'm sorry my dear. What about his dad?", "NoGift2")
+
+
+:: Prepare an emergency suitcase {"position":"2250,425","size":"100,100"}
+You stuff an old suitcase with all the essentials.
+
+Clothes, cash, your passport, and a photograph of you and your daughter in front of the Brandenburg Gate in Berlin.
+
+You miss her.
+
+(link-goto:"Go to bed", "StartDay2")
+
+
+:: ReassureAlexandra {"position":"950,750","size":"100,100"}
+Ms. Bodovora: I knew you'd understand, you're one of the good ones.
+
+(link-goto:"She pays for her groceries and leaves.", "LunaStart")
+
+
+:: Ruined {"position":"5450,2150","size":"100,100"}
+Vlad: War is hell. You didn’t deserve to be looted(if:$beatUp > 0)[ and beat up], but I know how to deal with all this ugliness. Look, I hid some vodka down here, behind your fridge... y’know, for emergencies.
+
+> (link-goto:"What is wrong with you? The world is ending around us, we are surrounded by enemies, and you want to open another bottle!?", "Drink2")
+
+
+:: Safe1 {"position":"5675,1900","size":"100,100"}
+Vlad: They took everything? Even the vodka? And the cigarettes... you must have something left for your old pal Vladdy?
+
+(if: $betrayedBenHassim is true)[
+> (link-goto:"How can you think about such a thing right now? I betrayed my friend, they are going to hurt Ben, and it’s all my fault...", "BetrayedSafe")
+]
+> (link-goto:"How can you think about such a thing right now? My store is in shambles... I'm ruined !", "Ruined")
+
+
+
+:: SoldiersAppease {"position":"5450,1500","size":"100,100"}
+Soldier: A misunderstanding eh? Then you won’t mid telling us who this young man is, so we can go... educate him.
+(set: $beatUp to 0)
+> (link-goto: "I don’t remember his name.", "InterrogationLie")
+<br>
+> (link: "...His name is Ben Hassim.")[
+(set: $betrayedBenHassim to true)
+(go-to:"EndInterruptionSafe")
+]
+
+
+:: SoldiersConfront {"position":"5475,1375","size":"100,100"}
+(if: $HasFlyer is true)[Soldier: We come all the way to help you people and this is the thanks we get? Don’t think we haven’t noticed your little terrorist flyer.
+
+> (link-goto: "It’s a misunderstanding, I promise! A young man asked me if he could advertise his club in my window... Of course if I had seen what it says, I would have removed it straight away and given him a good talking to. Please, take anything you need, I insist.", "SoldiersAppease")
+<br>
+> (link-goto:"How dare you ! Get out of my shop this instant.", "SoldiersConfront2")
+](else:)[Soldier: Apologies for the mess, sir. Our troops were in need of some vital goods... And a bottle or two. We thank you for your cooperation.
+
+He fails to hide a smirk.
+
+(link-goto:"Watch in silence as they take what they want from your shop.", "EndInterruptionSafe")
+]
+
+
+
+:: SoldiersConfront2 {"position":"5325,1500","size":"100,100"}
+Soldier: Or what, old man? C’mon boys, let’s teach this idiot a lesson about talking back.
+
+(link-goto:"The soldiers beat you up until you pass out.", "EndInterruptionPassOut")
+
+
+:: Start {"position":"425,300","size":"100,100"}
+You are a shop owner in Irpin, to the north-west of Kyïv, right at the beginning of the Russian invasion of 2022. You manage your shop, serving the customers in your neighborhood. It's a good life.
+
+(link-goto: "Start", "Start2")
+
+
+:: Start2 {"position":"600,300","size":"100,100"}
+**22 february 2022**
+
+6:30 - You hear knocks on the door.
+
+(set: $stock to 50)
+
+(link-goto: "Open the door", "VladStart")
+
+
+:: StartDay2 {"position":"2500,300","size":"100,100"}
+**24 february 2022**
+
+(link:"05:00")[05:00<br>You are awoken by the sound of air raid sirens.<br>
+
+(link:"It started.")["It started," you think to yourself. "The Russians have decided to invade."<br>
+
+(link:"Go to the basement")[You go down to the basement, waiting for the sirens to stop.<br>
+
+(link-goto:"Wait.", "Stefan1")
+]
+]]
+
+
+
+:: Stefan1 {"position":"2500,425","size":"100,100"}
+You hear banging on the door of the shop.
+
+(link-goto:"Open", "Stefan2")
+
+
+:: Stefan2 {"position":"2500,525","size":"100,100"}
+You open the door of the shop, only to find Stefan, the son of Ms. Bodovora.
+
+(link-goto: "Stefan! What are you doing out here? Can't you hear the sirens wailing outside?", "Stefan3")
+
+
+:: Stefan3 {"position":"2500,625","size":"100,100"}
+Stefan Bodovora: Mother sent me out to buy eggs, she's on a diet... so she only eats boiled eggs for breakfast. It sounds silly doesn't it, but if it helps her get out there again after dad... well you know.
+
+> (link-goto:"But aren't you worried? Maybe you should come back later... I'm sure your mother will understand.", "Stefan4")
+
+
+:: Stefan4 {"position":"2500,725","size":"100,100"}
+Stefan Bodovora: She's the one who sent me. She says no Russian should get in the way of a good breakfast, and frankly I agree. If we act scared, they'll think they won.
+
+> (link-goto:"You're a bright young lad with a future, you shouldn't be risking it on eggs and pride. Surely you know better.", "Stefan5")
+<br>
+> (link-goto:"What a brave man you have become. Tell your mother that she has done a great job raising an upstanding citizen when you get home.", "Stefan5")
+
+
+
+
+:: Stefan5 {"position":"2500,825","size":"100,100"}
+Stefan Bodovora: Thank you sir, I think you might be right.
+
+(link-goto: "He pays for the eggs and leaves in a hurry.", "NinaD2Start")
+
+
+:: Vlad2 {"position":"750,425","size":"100,100"}
+Vlad: Nonsense my friend! You're up aren't you? The door is open now, isn't it? There you go, men like us don't wait for anything!<br>
+
+> (link-goto: "*Sigh* There's no reasoning with you when you're like this... Last time you got us thrown out of Alex's bar because you were yelling all that pro-Russian nonsense. I'll go get you a pack of smokes, but then you should go rest up a bit, you look like hell.", "Vlad4")
+
+
+
+:: Vlad4 {"position":"750,550","size":"100,100"}
+Vlad: And I feel like it... The whole world's going to shit... Vodka prices through the roof... Mark my words, you'll see things my way soon enough...<br>
+
+> (link-goto: "You know me, I don't get involved. Still, aren’t you worried about all that stuff in the news? Did you know they're doing *exercises* close to the border now?", "Vlad5")
+
+
+:: Vlad5 {"position":"750,675","size":"100,100"}
+Bah, so what? They are here to help! It's like me, I come knocking at your door, and aren't you glad I did ? You worry too much my friend, that's why you're so bald.
+
+(link-goto: "Vlad drunkenly leaves.", "AlexandraStart")
+
+
+:: VladD2Start {"position":"3500,250","size":"100,100"}
+19:00 - Vlad arrives.
+
+Vlad: *Privet*, old man, you look like you've had one hell of a day, come out and drink your sorrows away, I'm still allowed in the Old Tavern.
+
+> (link-goto:"Oh hello Vlad... I do feel like a drink after today.", "Day3Start")
+
+
+:: VladD41 {"position":"5500,625","size":"100,100"}
+Vlad: ... What about a nice game of cards instead of that discussion? No one is coming in today anyhow. C’mon, I’ll let you start.
+
+(link-goto: "Play cards with Vlad in the basement.", "VladD42")
+
+
+:: VladD42 {"position":"5500,725","size":"100,100"}
+The hours pass. You almost forget what's going on up there.
+
+Vlad: Pass me another bottle now, will you?
+
+> (link-goto: "Vlad, aren’t you worried at all?", "VladD43")
+
+
+:: VladD43 {"position":"5500,825","size":"100,100"}
+Vlad: Look... I know things seem bad right now... But they’re just here to help us straighten things out, you know.
+
+> (link-goto: "And what if they don’t want to leave?", "VladD44")
+
+
+:: VladD44 {"position":"5500,925","size":"100,100"}
+Vlad: Psssch, of course they’ll leave! I know a thing or two about politics.
+
+> (link-goto:"I hope you’re right... They don’t look like they want to leave. What if they don’t?", "VladD4A")
+<br>
+> (link-goto:"I sure hope you’re right! I won’t be open much longer if this goes on, and I can’t imagine how tragic that would be for you.", "VladD4B")
+
+
+:: VladD4A {"position":"5425,1050","size":"100,100"}
+Vlad: Then we will keep living like this! Besides we’re perfectly safe right here.
+
+[...]
+
+Vlad: Are you thinking of leaving? Joining that ungrateful daughter of yours all the way in Berlin?
+
+(link-goto:"Bah... This is my home. Besides... I’m not sure she really wants me around.  How about you? Any family outside of here?", "VladD4A2")
+
+
+:: VladD4A2 {"position":"5425,1150","size":"100,100"}
+Vlad: You know, it’s just you and me brother. This place is my family, I’d never leave it.
+
+As he finishes his sentence, you hear loud banging on the front door again.
+
+(link-goto:"Go upstairs.", "D4Interruption")
+
+
+:: VladD4B {"position":"5550,1050","size":"100,100"}
+Vlad: Too true, I’d lose my best friend and my favorite liquor shop all at once. Now hand me another, a toast to resilience!
+
+As you toast, you hear loud banging on the front door again.
+
+(link-goto:"Go upstairs.", "D4Interruption")
+
+
+:: VladD51 {"position":"6900,400","size":"100,100"}
+Vlad: Then we will face them again! Oh you worry too much, our troubles are behind us now... Besides tomorrow is restocking day, your shop will be back to normal in no time. I'm sure Lenny will have a deal for you.
+
+> (link-goto: "Yes... you may be right.", "VladD5End")
+<br>
+> (link-goto: "I don't know.", "VladD5End")
+
+
+:: VladD5End {"position":"6900,500","size":"100,100"}
+Vlad: I see you're undecided. I'll come back later, but do say goodbye if you leave, my friend. I'll be sad to see you go.
+
+(link-goto: "He leaves.", "End")
+
+
+
+
+:: VladD5Start {"position":"6900,300","size":"100,100"}
+It's a difficult choice to make. Luckily, a distraction appears in the shape of Vlad.
+
+Vlad: Good day my friend! The sun is beautiful this afternoon!
+
+> (link-goto: "Hello Vlad. Miss Gabi came by earlier, she’s going to leave... do you think we are doing the right thing staying here? What if the Russians come back?", "VladD51")
+
+
+:: VladStart {"position":"750,300","size":"100,100"}
+It's Vlad. Your old friend.<br>
+
+> (link-goto: "Oh, it's you Vlad... The shop doesn't open for another hour, maybe you should go sleep it off.", "Vlad2")
+
+
+:: StoryStylesheet [stylesheet]
+/* General text styling - Typewriter war aesthetic */
+tw-story {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #0e0e0e;  /* Near-black for a stark contrast */
+    color: #d4d4d4; /* Light grey for a faded print look */
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+}
+
+/* Links (choices) - Bold blue with yellow hover */
+tw-link {
+    color: #0077FF;  /* Bright Ukrainian blue */
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+tw-link:hover {
+    color: #FFD700;  /* Ukrainian yellow */
+    border-bottom: 2px solid #FFD700; /* Adds emphasis */
+}
+
+/* Passage box - Rough, military paper feel */
+tw-passage {
+    max-width: 100%;
+    width: 100%; /* Fixed width */
+    height: 80vh; /* Fixed height - adjust as needed */
+    margin: 0;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.85);
+    border: 3px solid #555;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    
+    /* Add these properties for scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    
+    /* Optional: Custom scrollbar styling */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #555 #1a1a1a; /* Firefox */
+}
+
+
+/* Hide UI sidebar */
+/*tw-sidebar {
+    display: none;
+}*/
+
+/* Add a subtle noise effect to the background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/noisy-grid.png'); /* Adds a grainy, rough feel */
+    opacity: 1;
+    z-index: -1;
+}

@@ -1,0 +1,634 @@
+<tw-storydata name="Ukraine-shopkeeper" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="223A69AF-5BC7-4D37-8039-7910F18BAF6F" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* General text styling - Typewriter war aesthetic */
+tw-story {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #0e0e0e;  /* Near-black for a stark contrast */
+    color: #d4d4d4; /* Light grey for a faded print look */
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+}
+
+/* Links (choices) - Bold blue with yellow hover */
+tw-link {
+    color: #0077FF;  /* Bright Ukrainian blue */
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+tw-link:hover {
+    color: #FFD700;  /* Ukrainian yellow */
+    border-bottom: 2px solid #FFD700; /* Adds emphasis */
+}
+
+/* Passage box - Rough, military paper feel */
+tw-passage {
+    max-width: 100%;
+    width: 100%; /* Fixed width */
+    height: 80vh; /* Fixed height - adjust as needed */
+    margin: 0;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.85);
+    border: 3px solid #555;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    
+    /* Add these properties for scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    
+    /* Optional: Custom scrollbar styling */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #555 #1a1a1a; /* Firefox */
+}
+
+
+/* Hide UI sidebar */
+/*tw-sidebar {
+    display: none;
+}*/
+
+/* Add a subtle noise effect to the background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/noisy-grid.png'); /* Adds a grainy, rough feel */
+    opacity: 1;
+    z-index: -1;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="425,300" size="100,100">You are a shop owner in Irpin, to the north-west of Kyïv, right at the beginning of the Russian invasion of 2022. You manage your shop, serving the customers in your neighborhood. It&#39;s a good life.
+
+(link-goto: &quot;Start&quot;, &quot;Start2&quot;)</tw-passagedata><tw-passagedata pid="2" name="Vlad4" tags="" position="750,550" size="100,100">Vlad: And I feel like it... The whole world&#39;s going to shit... Vodka prices through the roof... Mark my words, you&#39;ll see things my way soon enough...&lt;br&gt;
+
+&gt; (link-goto: &quot;You know me, I don&#39;t get involved. Still, aren’t you worried about all that stuff in the news? Did you know they&#39;re doing *exercises* close to the border now?&quot;, &quot;Vlad5&quot;)</tw-passagedata><tw-passagedata pid="3" name="VladStart" tags="" position="750,300" size="100,100">It&#39;s Vlad. Your old friend.&lt;br&gt;
+
+&gt; (link-goto: &quot;Oh, it&#39;s you Vlad... The shop doesn&#39;t open for another hour, maybe you should go sleep it off.&quot;, &quot;Vlad2&quot;)</tw-passagedata><tw-passagedata pid="4" name="Vlad2" tags="" position="750,425" size="100,100">Vlad: Nonsense my friend! You&#39;re up aren&#39;t you? The door is open now, isn&#39;t it? There you go, men like us don&#39;t wait for anything!&lt;br&gt;
+
+&gt; (link-goto: &quot;*Sigh* There&#39;s no reasoning with you when you&#39;re like this... Last time you got us thrown out of Alex&#39;s bar because you were yelling all that pro-Russian nonsense. I&#39;ll go get you a pack of smokes, but then you should go rest up a bit, you look like hell.&quot;, &quot;Vlad4&quot;)
+</tw-passagedata><tw-passagedata pid="5" name="Vlad5" tags="" position="750,675" size="100,100">Bah, so what? They are here to help! It&#39;s like me, I come knocking at your door, and aren&#39;t you glad I did ? You worry too much my friend, that&#39;s why you&#39;re so bald.
+
+(link-goto: &quot;Vlad drunkenly leaves.&quot;, &quot;AlexandraStart&quot;)</tw-passagedata><tw-passagedata pid="6" name="AlexandraStart" tags="" position="1000,300" size="100,100">10:00 - A customer arrives.
+
+&gt; (link-goto:&quot;Good morning madam Bodovora, how are things going today?&quot;, &quot;Alexandra2&quot;)</tw-passagedata><tw-passagedata pid="7" name="Alexandra2" tags="" position="1000,500" size="100,100">Alexandra Bodovora: Oh it&#39;s dreadful, just absolutely awful... those people are beastly! 
+
+&gt; (link-goto: &quot;What is the matter ?&quot;, &quot;Alexandra3&quot;)</tw-passagedata><tw-passagedata pid="8" name="Alexandra3" tags="" position="1000,600" size="100,100">Alexandra Bodovora: It&#39;s Stefan, the poor dear just got his first job last month, and they just fired him for nothing at all! All he did was raise his voice a little at his boss... but you know how young men are, right? I tried to go talk to the manager, but they told me he has anger issues. Can you believe such a ridiculous thing? My son is an angel, and he deserves better than a crummy old job. I&#39;m going to try to get him to get a degree... that way he can be the one to boss those no good idiots around!
+
+&gt; (link-goto:&quot;Ha, that&#39;s a smart plan! I always say the world has gotten too hard on young boys, at least your son has character.&quot;, &quot;ReassureAlexandra&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;Well, Alexandra... I know you mean well, but I&#39;ve known you and your son for a while, and he can be a bit hot-headed. Maybe you should let him learn from his mistakes... this time at least?  &quot;, &quot;ConfrontAlexandra&quot;)</tw-passagedata><tw-passagedata pid="9" name="ReassureAlexandra" tags="" position="950,750" size="100,100">Ms. Bodovora: I knew you&#39;d understand, you&#39;re one of the good ones.
+
+(link-goto:&quot;She pays for her groceries and leaves.&quot;, &quot;LunaStart&quot;)</tw-passagedata><tw-passagedata pid="10" name="ConfrontAlexandra" tags="" position="1075,750" size="100,100">Ms. Bodovora: Huh, I see. Well at least my son is around, when did you last speak to your daughter eh?
+
+&gt; (link-goto: &quot;It&#39;s been... weeks.&quot;, &quot;ConfrontAlexandra1&quot;)</tw-passagedata><tw-passagedata pid="11" name="LunaStart" tags="" position="1275,300" size="100,100">12:00 - A young mother enters with her toddler.
+
+&gt; (link-goto: &quot;Oh Gabi, it&#39;s nice to see you, how are you holding up?&quot;, &quot;Luna1&quot;)</tw-passagedata><tw-passagedata pid="12" name="ConfrontAlexandra1" tags="" position="1075,875" size="100,100">Ms. Bodovora: Look, I didn&#39;t mean it like that... But you know, I&#39;m a mama bear, ever since... you know, since I&#39;ve been alone, I&#39;ve wanted to protect him and make him strong.
+
+
+&gt; (link:&quot;I understand, we are both doing what we think is best...&quot;)[I understand, we are both doing what we think is best...&lt;br&gt;
+(link-goto:&quot;She pays for her groceries and leaves.&quot;, &quot;LunaStart&quot;)]</tw-passagedata><tw-passagedata pid="13" name="Luna1" tags="" position="1275,425" size="100,100">Gabi Luna: I am so tired! The little one&#39;s been sick all week and I haven&#39;t even had time to do laundry or find a new job... I&#39;ll just get some milk and flour today
+(link:&quot;...&quot;)[... Sunny put that lollipop down! We can&#39;t afford that right now. &lt;br&gt;
+
+&gt; (link:&quot;Hey Sunny, why don&#39;t you keep that treat. Don&#39;t worry Miss Gabi, you&#39;ll get back on your feet soon enough, and you&#39;re doing great with your son.&quot;)[
+(set: $generous_choices to $generous_choices + 1)
+(set: $stock to $stock - 10)
+(go-to:&quot;GiftLollipop&quot;)
+]
+&lt;br&gt;
+&gt; (link-goto: &quot;I&#39;m so sorry to hear that. Times are hard for everyone, don&#39;t you have any family that could help?&quot;, &quot;NoGiftLollipop&quot;)
+]</tw-passagedata><tw-passagedata pid="14" name="GiftLollipop" tags="" position="1200,550" size="100,100">Gabi Luna: Thank you thank you! You know, ever since we moved here, you’ve been so nice to me and my boy, and now you made our day!
+
+(link-goto:&quot;She pays for the rest of her groceries and leaves with her son.&quot;, &quot;NinaStart&quot;)</tw-passagedata><tw-passagedata pid="15" name="NoGiftLollipop" tags="" position="1350,550" size="100,100">Gabi Luna: No... They won&#39;t talk to me. I haven&#39;t seen my family since I came to Ukraine, and I&#39;m never going back.
+
+(link-goto: &quot;I&#39;m sorry my dear. What about his dad?&quot;, &quot;NoGift2&quot;)</tw-passagedata><tw-passagedata pid="16" name="NoGift2" tags="" position="1350,675" size="100,100">Gabi Luna: He&#39;s the reason I left.
+
+&gt; (link: &quot;Well chin up, things are surely going to get better for us all, and especially for a lovely and intelligent young lady like yourself.&quot;)[Well chin up, things are surely going to get better for us all, and especially for a lovely and intelligent young lady like yourself. &lt;br&gt; 
+(link-goto:&quot;She pays for her groceries and leaves with her son.&quot;, &quot;NinaStart&quot;)
+]</tw-passagedata><tw-passagedata pid="17" name="EndDay1" tags="" position="2250,300" size="100,100">That&#39;s it. No one else is coming today. While closing the shop, you think about the danger, if a war is really brewing. If it happens, what will you do ? It&#39;s always good to be prepared.
+
+[[Prepare an emergency suitcase]]</tw-passagedata><tw-passagedata pid="18" name="NinaStart" tags="" position="1525,300" size="100,100">15:00 - A new customer arrives. It&#39;s Mrs. Melkova, a cheerful yet stubborn babushka who lives across the street. She comes regularly to buy lottery tickets and talk.
+
+&gt; (link-goto: &quot;Miss Nina, it&#39;s great to see you, how is my most loyal customer today?&quot;, &quot;Nina1&quot;)</tw-passagedata><tw-passagedata pid="19" name="Nina1" tags="" position="1525,425" size="100,100">Nina Melkova: I&#39;m fit as a fiddle, thank you very much! These old bones of mine are solid. 
+&lt;br&gt;
+&gt; (link-goto: &quot;That&#39;s great to hear!&quot;, &quot;NinaMundane&quot;)
+&lt;br&gt;
+&gt; (link:&quot;That&#39;s good to hear... So, have you spoken to your son recently? You know, with the news...&quot;)[
+(set: $family_choices to $family_choices + 1)
+(go-to:&quot;NinaSon&quot;)
+]
+
+</tw-passagedata><tw-passagedata pid="20" name="NinaMundane" tags="" position="1475,550" size="100,100">Nina Melkova: Well, to tell the truth...... my knees are playing up a bit, but I&#39;m lucky your shop is right across the street! Do you have my lottos?
+
+(link-goto: &quot;That&#39;s what I&#39;m here for Ma&#39;am! Do you think today&#39;s ticket is a winner?&quot;, &quot;NinaMundane2&quot;)</tw-passagedata><tw-passagedata pid="21" name="NinaSon" tags="" position="1600,550" size="100,100">Nina Melkova: Now don&#39;t you start on that too! Nikolai is all up in a tizzy, trying to get me to move to Belgorod with his family and his witch of a wife! I&#39;m perfectly capable of taking care of myself thank you very much.
+
+(link-goto:&quot;But you have grandchildren, don&#39;t you miss them?&quot;, &quot;NinaSon2&quot;)</tw-passagedata><tw-passagedata pid="22" name="NinaMundane2" tags="" position="1475,650" size="100,100">Nina Melkova: I hope so! Maybe that no good son of mine would move his family closer if I was rich... Oh drat, not today I guess.
+
+(link-goto:&quot;There&#39;s always tomorrow ! Besides, I don&#39;t know what I&#39;d do if you didn&#39;t come in anymore, you&#39;re my favorite customer!&quot;, &quot;NinaMundane3&quot;)</tw-passagedata><tw-passagedata pid="23" name="NinaSon2" tags="" position="1600,650" size="100,100">Nina Melkova: Every day... you know how it is don&#39;t you? But I am not moving away from my home for anyone or anything, besides... I don&#39;t like those damned Russians one bit. Believe me, they are nothing but trouble.
+
+(link-goto: &quot;Nina leaves.&quot;, &quot;KovalenkoStart&quot;)</tw-passagedata><tw-passagedata pid="24" name="NinaMundane3" tags="" position="1475,750" size="100,100">Nina Melkova: You old charmer... See you tomorrow.
+
+(link-goto:&quot;Nina leaves.&quot;, &quot;KovalenkoStart&quot;)</tw-passagedata><tw-passagedata pid="25" name="KovalenkoStart" tags="" position="1800,300" size="100,100">17:00 - A couple enters. It&#39;s Danya and Mikhail Kovalenko, a farmer family who lives nearby.
+
+
+&gt; (link:&quot;Well good afternoon to you both. How is my favourite family?&quot;)[
+(set: $family_choices to $family_choices + 1)
+(go-to:&quot;KovalenkoFamily&quot;)
+]
+&lt;br&gt;
+&gt; (link-goto:&quot;Danya, Mikhail! how is the farm? almost time to start planting I bet.&quot;, &quot;KovalenkoFarm&quot;)</tw-passagedata><tw-passagedata pid="26" name="KovalenkoFamily" tags="" position="1725,425" size="100,100">Danya Kovalenko: Great!
+
+(link:&quot;...&quot;)[Mikhail Kovalenko: Well... everyone has their own little issues don&#39;t they?
+
+(link-goto:&quot;Of course... is Stella having trouble at school? She is so sweet, I hope no one is picking on her.&quot;, &quot;KovalenkoFamily2&quot;)]</tw-passagedata><tw-passagedata pid="27" name="KovalenkoFarm" tags="" position="1850,425" size="100,100">Mikhail Kovalenko: Not yet, but as soon as the ground thaws properly we will be back at it, as always.
+
+(link-goto:&quot;I sure hope so. My pops used to send me to get his eggs from your father, the Kovalenko farm is a landmark of our town.&quot;, &quot;KovalenkoFarm2&quot;)</tw-passagedata><tw-passagedata pid="28" name="KovalenkoFarm2" tags="" position="1850,525" size="100,100">Mikhail Kovalenko: I remember... you were young then, about as old as Peter is now as a matter of fact!
+
+(link-goto: &quot;And you were only a small boy, but already so eager to follow in your father&#39;s footsteps.&quot;, &quot;KovalenkoFarm3&quot;)</tw-passagedata><tw-passagedata pid="29" name="KovalenkoFarm3" tags="" position="1850,625" size="100,100">Mikhail Kovalenko: As any boy would. Now, let&#39;s get some supplies and head back to work, Danya has promised us all warm apple cake when Peter and I finish up repairing the barn roof.
+
+(link-goto:&quot;They pay for their groceries and leave.&quot;, &quot;LennyStart&quot;)</tw-passagedata><tw-passagedata pid="30" name="KovalenkoFamily2" tags="" position="1725,525" size="100,100">Danya Kovalenko: Actually it&#39;s Peter...
+
+
+(link-goto:&quot;Oh I see, but I thought he was done with school, working on the farm with you Mikhail.&quot;, &quot;KovalenkoFamily3&quot;)</tw-passagedata><tw-passagedata pid="31" name="KovalenkoFamily3" tags="" position="1725,625" size="100,100">Mikhail Kovalenko: He is... but he doesn&#39;t seem to like it, he keeps talking about some fancy art school in Strasbourg... He even said he wanted a better life than me and my father and his father... Whatever that means.
+
+(link:&quot;...&quot;)[Danya Kovalenko: Well he is young, still figuring things out. Of course we&#39;d love for him to stay, but...
+
+(link:&quot;...&quot;)[Mikhail Kovalenko: But nothing, he&#39;s just having a little teenage tantrum, that&#39;s all.
+
+&gt; (link:&quot;It would sure be a shame for the farm&#39;s legacy to be lost, I hope it works out for all of you.&quot;)[It would sure be a shame for the farm&#39;s legacy to be lost, I hope it works out for all of you.&lt;br&gt;
+(link-goto:&quot;They pay for their groceries and leave.&quot;, &quot;LennyStart&quot;)]]]</tw-passagedata><tw-passagedata pid="32" name="LennyStart" tags="" position="2050,300" size="100,100">19:00 - As you&#39;re getting ready to close the shop, a man enters. It&#39;s Lenny, your shop&#39;s supplier.
+
+
+(link-goto:&quot;Is it restocking time already?&quot;, &quot;Lenny1&quot;)</tw-passagedata><tw-passagedata pid="33" name="Lenny1" tags="" position="2050,425" size="100,100">Lenny: Why the face, my friend, aren’t you happy to see your old pal Lenny?
+
+&gt; (link-goto:&quot;Oh it&#39;s all this bother on the news, it&#39;s enough to get anyone feeling nervous&quot;, &quot;Lenny2&quot;)
+(if: $family_choices &gt;= 2)[
+&gt; (link-goto: &quot;Well... Some of my customers are having a hard time, I&#39;m not made of stone. Besides... the news.&quot;, &quot;Lenny2&quot;)
+]</tw-passagedata><tw-passagedata pid="34" name="Lenny2" tags="" position="2050,525" size="100,100">Lenny: Ah yes... the news. Since you are one of my best clients, there&#39;s something we should discuss.
+
+&gt; (link-goto:&quot;What is it ?&quot;, &quot;Lenny3&quot;)</tw-passagedata><tw-passagedata pid="35" name="Lenny3" tags="" position="2050,625" size="100,100">Lenny: Well... I hear there is a war coming, a real one this time. So I&#39;m getting ready.
+
+&gt; (link-goto:&quot;You mean you&#39;re gonna run away?&quot;, &quot;Lenny4&quot;)</tw-passagedata><tw-passagedata pid="36" name="Lenny4" tags="" position="2050,725" size="100,100">Lenny: Haha, not even close, but I am going to make sure me and my own are well protected during this difficult time... that&#39;s why I am coming to you with an idea.
+
+&gt; (link-goto:&quot;What do you mean..?&quot;, &quot;Lenny5&quot;)</tw-passagedata><tw-passagedata pid="37" name="Lenny5" tags="" position="2050,825" size="100,100">Lenny: Alright, listen up. I can offer you a bigger restock this time: 150% instead of the usual. No extra charge today. But here’s the thing. I had to pull some favors to get this much. If you take the extra stock, I need to know you’ll be able to cover my costs down the line. That means you’ll have to **bump up your prices** a little—just enough to keep things steady. Otherwise, I can’t afford to keep doing you favors like this.
+
+&gt; (link:&quot;Well... I’m not sure about this whole war thing, but I can’t let my clients starve. Better to have more than not enough. (Take 150%, increase prices)&quot;)[
+(set: $stock to 150)
+(set: $extra_refill to true)
+(go-to: &quot;LennyIncrease&quot;)
+]
+&lt;br&gt;
+&gt; (link: &quot;You’re trying to use a crisis to exploit people? That’s not the kind of business I want to run. (Take the regular shipment, keep current prices)&quot;)[
+(set: $stock to 100)
+(set: $extra_refill to false)
+(go-to: &quot;LennyCallout&quot;)
+]</tw-passagedata><tw-passagedata pid="38" name="LennyCallout" tags="" position="2000,1025" size="100,100">Lenny: You&#39;re a better man than I am, always looking out for those little clients of yours. Well, goodnight and good luck!
+
+(link-goto:&quot;Lenny leaves.&quot;, &quot;EndDay1&quot;)</tw-passagedata><tw-passagedata pid="39" name="LennyIncrease" tags="" position="2125,1025" size="100,100">Lenny: That&#39;s the spirit. We need to survive. See you around.
+
+(link-goto:&quot;Lenny leaves.&quot;, &quot;EndDay1&quot;)</tw-passagedata><tw-passagedata pid="40" name="Prepare an emergency suitcase" tags="" position="2250,425" size="100,100">You stuff an old suitcase with all the essentials.
+
+Clothes, cash, your passport, and a photograph of you and your daughter in front of the Brandenburg Gate in Berlin.
+
+You miss her.
+
+(link-goto:&quot;Go to bed&quot;, &quot;StartDay2&quot;)</tw-passagedata><tw-passagedata pid="41" name="StartDay2" tags="" position="2500,300" size="100,100">**24 february 2022**
+
+(link:&quot;05:00&quot;)[05:00&lt;br&gt;You are awoken by the sound of air raid sirens.&lt;br&gt;
+
+(link:&quot;It started.&quot;)[&quot;It started,&quot; you think to yourself. &quot;The Russians have decided to invade.&quot;&lt;br&gt;
+
+(link:&quot;Go to the basement&quot;)[You go down to the basement, waiting for the sirens to stop.&lt;br&gt;
+
+(link-goto:&quot;Wait.&quot;, &quot;Stefan1&quot;)
+]
+]]
+</tw-passagedata><tw-passagedata pid="42" name="Stefan1" tags="" position="2500,425" size="100,100">You hear banging on the door of the shop.
+
+(link-goto:&quot;Open&quot;, &quot;Stefan2&quot;)</tw-passagedata><tw-passagedata pid="43" name="Stefan2" tags="" position="2500,525" size="100,100">You open the door of the shop, only to find Stefan, the son of Ms. Bodovora.
+
+(link-goto: &quot;Stefan! What are you doing out here? Can&#39;t you hear the sirens wailing outside?&quot;, &quot;Stefan3&quot;)</tw-passagedata><tw-passagedata pid="44" name="Stefan3" tags="" position="2500,625" size="100,100">Stefan Bodovora: Mother sent me out to buy eggs, she&#39;s on a diet... so she only eats boiled eggs for breakfast. It sounds silly doesn&#39;t it, but if it helps her get out there again after dad... well you know.
+
+&gt; (link-goto:&quot;But aren&#39;t you worried? Maybe you should come back later... I&#39;m sure your mother will understand.&quot;, &quot;Stefan4&quot;)</tw-passagedata><tw-passagedata pid="45" name="Stefan4" tags="" position="2500,725" size="100,100">Stefan Bodovora: She&#39;s the one who sent me. She says no Russian should get in the way of a good breakfast, and frankly I agree. If we act scared, they&#39;ll think they won.
+
+&gt; (link-goto:&quot;You&#39;re a bright young lad with a future, you shouldn&#39;t be risking it on eggs and pride. Surely you know better.&quot;, &quot;Stefan5&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;What a brave man you have become. Tell your mother that she has done a great job raising an upstanding citizen when you get home.&quot;, &quot;Stefan5&quot;)
+
+</tw-passagedata><tw-passagedata pid="46" name="Stefan5" tags="" position="2500,825" size="100,100">Stefan Bodovora: Thank you sir, I think you might be right.
+
+(link-goto: &quot;He pays for the eggs and leaves in a hurry.&quot;, &quot;NinaD2Start&quot;)</tw-passagedata><tw-passagedata pid="47" name="NinaD2Start" tags="" position="2825,300" size="100,100">10:00 - Nina Melkova arrives, like every day.
+
+Nina Melkova: Well, looks like it&#39;s raining cats, dogs and missiles today!
+
+&gt; (link-goto: &quot;Miss Nina, what are you doing here? At your age you should be safely inside.&quot;, &quot;NinaD21&quot;)</tw-passagedata><tw-passagedata pid="48" name="NinaD21" tags="" position="2825,400" size="100,100">Nina Melkova: Don&#39;t be silly, there are no lottery tickets to scratch inside. Besides, exercise is key to living a long life.
+
+&gt; (link-goto: &quot;But aren&#39;t you worried about the sirens?&quot;, &quot;NinaD22&quot;)</tw-passagedata><tw-passagedata pid="49" name="NinaD22" tags="" position="2825,500" size="100,100">Nina Melkova: Those things, ha, my son has been phoning so much that I can hardly hear them anymore.
+
+&gt; (link-goto:&quot;Nina... You know I care about you, right? We have known each other for decades, and I must be honest with you. Please, please listen to your son, and go be safe with your family.&quot;, &quot;NinaD2Confront&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;Perhaps they should invest in louder missiles if they want to get to you!&quot;, &quot;NinaD2Encourage&quot;)</tw-passagedata><tw-passagedata pid="50" name="NinaD2Confront" tags="" position="2750,625" size="100,100">Nina Melkova: I will see them for easter and then my son&#39;s birthday in June... I don&#39;t know why you are fussing too now, you are beginning to sound just like him.
+
+&gt; (link-goto:&quot;But these sirens... something bad is coming, I know as much. [...] I know how strong you are, but what if you get hurt, what if...&quot;, &quot;NinaD2Confront2&quot;)
+</tw-passagedata><tw-passagedata pid="51" name="NinaD2Encourage" tags="" position="2875,625" size="100,100">Nina Melkova: Or throw that damned phone away! Poor son of mine can&#39;t understand what it means to be a patriot like you do.
+
+(link-goto: &quot;She gives you a tip and leaves&quot;, &quot;BenHassimStart&quot;)</tw-passagedata><tw-passagedata pid="52" name="NinaD2Confront2" tags="" position="2750,750" size="100,100">Nina Melkova: If I die, is that it mister? We old people have been through this before, and if I&#39;m still alive today. They won&#39;t get me tomorrow either!
+
+(link-goto:&quot;She leaves, and doesn&#39;t even pay.&quot;, &quot;BenHassimStart&quot;)</tw-passagedata><tw-passagedata pid="53" name="BenHassimStart" tags="" position="3100,275" size="100,100">12:00 - You see a young man, who you recognize to be Alexander Ben Hassim, a student who lives a few blocks away.
+
+&gt; (link-goto: &quot;Hello Alexander, what can I do for you today?&quot;, &quot;BenHassim1&quot;)</tw-passagedata><tw-passagedata pid="54" name="BenHassim1" tags="" position="3100,400" size="100,100">Alexander Ben Hassim: I was just coming for some food... but on the way here I saw... she was lying face down... A child... Killed by a missile. They are monsters.
+
+&gt; (link-goto: &quot;I&#39;m scared too Alex, I just wish there was something I could do to protect my friends.&quot;, &quot;BenHassim2&quot;)</tw-passagedata><tw-passagedata pid="55" name="BenHassim2" tags="" position="3100,500" size="100,100">Alexander Ben Hassim: So do I... I feel helpless in the midst of all of this.
+
+&gt; (link-goto: &quot;It&#39;s not your job to worry about everyone, the government will take care of us. In the meantime, try not to worry too much&quot;, &quot;BenHassim3&quot;)
+&lt;br&gt;
+&gt; (link-goto: &quot;None of us is completely helpless. I am sure you can find your own way to contribute.&quot;, &quot;BenHassim3&quot;)</tw-passagedata><tw-passagedata pid="56" name="BenHassim3" tags="" position="3100,600" size="100,100">(link-goto: &quot;He smiles, pays and leaves.&quot;, &quot;MikhailStart&quot;)</tw-passagedata><tw-passagedata pid="57" name="MikhailStart" tags="" position="3300,250" size="100,100">15:00 - You see Mikhail Kovalenko approaching. He looks out of breath.
+
+Mikhail Kovalenko: Do you have any water left?
+
+
+(link-goto: &quot;Hello Mikhail, take a breath, I have enough bottled water to last you and your family for a little while.&quot;, &quot;Mikhail2&quot;)
+
+</tw-passagedata><tw-passagedata pid="58" name="Mikhail2" tags="" position="3300,350" size="100,100">Mikhail Kovalenko: That&#39;s the trouble with all of you, always talking about things lasting &quot;a little while&quot;. Farms are forever. Family is forever.
+
+&gt; (link-goto: &quot;Did something happen to your farm? I thought you were far enough from the front to be safe.&quot;, &quot;Mikhail3&quot;)</tw-passagedata><tw-passagedata pid="59" name="Mikhail3" tags="" position="3300,450" size="100,100">Mikhail Kovalenko: It&#39;s not the war... it&#39;s my wife.
+
+&gt; (link-goto:&quot;I should have suspected as much when you came in looking like you did, women troubles. But I saw you guys last week, what on earth could have changed since then?&quot;, &quot;Mikhail4&quot;)</tw-passagedata><tw-passagedata pid="60" name="Mikhail4" tags="" position="3300,575" size="100,100">Mikhail Kovalenko: She says it&#39;s time to leave. She called me an idiot for putting my children in danger, but I love my home, and so do they. I&#39;m doing this for them, to protect their future, doesn&#39;t she get that?
+
+(link: &quot;...&quot;)[But nooo she wants to take the kids to Strasbourg, says it will give Peter an opportunity to thrive away from all this, and that at least there, Stella will be safe. Safe... safe is with me, in our farm, where I know the land and the people... there is nothing safer than home.
+
+&gt; (link-goto:&quot;Calm down Mikhail, perhaps things aren&#39;t as bad as they seem.&quot;, &quot;Mikhail5&quot;)
+]</tw-passagedata><tw-passagedata pid="61" name="Mikhail5" tags="" position="3300,675" size="100,100">Mikhail Kovalenko: Well, my wife is acting all strange now... ever since I told her I would always stay, she has been quiet... and well... you know how she is usually. That&#39;s why I want to show her how safe our home is by making sure we are all stocked up on water... Are these the only bottles you have?
+
+&gt; (link-goto: &quot;There are a few more in the back.&quot;, &quot;Mikhail6&quot;)</tw-passagedata><tw-passagedata pid="62" name="Mikhail6" tags="" position="3300,775" size="100,100">Mikhail Kovalenko: Great, I&#39;ll take the lot.
+
+&gt; (link-goto: &quot;Of course, anything to help your family in these difficult times.&quot;, &quot;MikhailGiveWater&quot;)
+&lt;br&gt;
+&gt; (link-goto: &quot;Mikhail... you know I can&#39;t do that. What about the others? I have to make sure everyone can have at least a little clean water. You understand.&quot;, &quot;MikhailRefuseWater&quot;)
+
+</tw-passagedata><tw-passagedata pid="63" name="MikhailGiveWater" tags="" position="3200,900" size="100,100">Mikhail Kovalenko: You are a hero, I am eternally grateful.
+
+(set: $AllWaterSold to true)
+
+(link-goto: &quot;He pays and leaves.&quot;, &quot;VladD2Start&quot;)
+</tw-passagedata><tw-passagedata pid="64" name="MikhailRefuseWater" tags="" position="3350,900" size="100,100">Mikhail Kovalenko: Well how am I going to convince Danya that things are safe when we can&#39;t even buy enough water? If you don&#39;t help me, I&#39;m afraid I won&#39;t be able to protect my family...
+
+(set: $AllWaterSold to false)
+(link-goto: &quot;He pays and leaves, somewhat irritated.&quot;, &quot;VladD2Start&quot;)</tw-passagedata><tw-passagedata pid="65" name="VladD2Start" tags="" position="3500,250" size="100,100">19:00 - Vlad arrives.
+
+Vlad: *Privet*, old man, you look like you&#39;ve had one hell of a day, come out and drink your sorrows away, I&#39;m still allowed in the Old Tavern.
+
+&gt; (link-goto:&quot;Oh hello Vlad... I do feel like a drink after today.&quot;, &quot;Day3Start&quot;)</tw-passagedata><tw-passagedata pid="66" name="Day3Start" tags="" position="3700,250" size="100,100">**27 february 2024**
+
+After the initial shock of the air raids and Russian army incursion on Ukraine&#39;s territory, the fighting is getting closer to Irpin. You can hear the firefights in Bucha, just a few kilometers away.
+
+Even then, you see Danya Kovalenko and her daugter coming to the shop.
+
+&gt; (link-goto:&quot;Good morning Danya and Stella, what can I do for you today?&quot;, &quot;Danya1&quot;)</tw-passagedata><tw-passagedata pid="67" name="Danya1" tags="" position="3700,350" size="100,100">Danya Kovalenko: Well... please don&#39;t tell anyone, but I need an emergency bag.
+
+&gt; (link-goto: &quot;I&#39;m sorry to meddle but... are you sure? I met your husband the other day and he told me you all planned to stay and protect the farm, he will be heartbroken to leave it&quot;, &quot;Danya2&quot;)</tw-passagedata><tw-passagedata pid="68" name="Danya2" tags="" position="3700,450" size="100,100">Danya Kovalenko: That&#39;s why it&#39;s a secret... I don&#39;t think Mik will want to join us, and I won&#39;t let him stop us. I heard gunfire last night, and I won&#39;t allow for my babies to get hurt.
+
+(link:&quot;...&quot;)[Stella Kovalenko: Daddy says it&#39;s our job to protect the farm. I&#39;m going to be strong like him. I&#39;m a Ukrainian!
+
+(link:&quot;...&quot;)[Danya Kovalenko: Please...
+
+&gt; (link-goto:&quot;I&#39;ll do what I can to help, here.&quot;, &quot;DanyaAccept&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;Why don&#39;t you talk about it with Mikhail ?&quot;, &quot;DanyaRefuse&quot;)
+
+]
+]</tw-passagedata><tw-passagedata pid="69" name="DanyaRefuse" tags="" position="3650,575" size="100,100">Danya Kovalenko: I have, but he&#39;s not listening to me. Still, thank you for the bag.
+
+(link-goto: &quot;She pays and leaves with her daughter&quot;, &quot;NinaD3Start&quot;)</tw-passagedata><tw-passagedata pid="70" name="DanyaAccept" tags="" position="3800,575" size="100,100">Danya Kovalenko: Thank you for understanding.
+
+
+(link-goto: &quot;She pays and leaves with her daughter.&quot;, &quot;NinaD3Start&quot;)</tw-passagedata><tw-passagedata pid="71" name="NinaD3Start" tags="" position="4000,250" size="100,100">12:00 - You see Nina coming, as usual.
+
+&gt; (link-goto: &quot;Nina, I&#39;m so happy you are okay!&quot;, &quot;NinaD31&quot;)</tw-passagedata><tw-passagedata pid="72" name="NinaD31" tags="" position="4000,350" size="100,100">Nina Melkova: What else would I be?
+
+&gt; (link-goto:&quot;I thought maybe you had taken up your son on his offer... you know, to go join him in Russia.&quot;, &quot;NinaD32&quot;)</tw-passagedata><tw-passagedata pid="73" name="NinaD32" tags="" position="4000,450" size="100,100">Nina Melkova: I will die how I lived, proud on the land of my mother, her mother, and her mother before her.
+
+&gt; (link-goto:&quot;You are a hero, and I cannot help but admire your spirit.&quot;, &quot;NinaD3Encourage&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;What are you going to prove by dying? What about your granddaughter, who won&#39;t get to know you because of your stubbornness?&quot;, &quot;NinaD3Confront&quot;)</tw-passagedata><tw-passagedata pid="74" name="NinaD3Confront" tags="" position="3925,575" size="100,100">Nina Melkova: I thought you were one of us, but now I see you&#39;re a coward and a traitor. You know what, keep the tickets, you vile rat. My granddaughter will have a grandmother she can be proud of, unlike some.
+
+&gt; (link-goto:&quot;Nina, wait !&quot;, &quot;NinaD3Confront2&quot;)</tw-passagedata><tw-passagedata pid="75" name="NinaD3Encourage" tags="" position="4050,575" size="100,100">Nina Melkova: I knew you&#39;d understand. People like you are the reason I know I am right to stay, our people are brave and resilient.
+
+(link-goto:&quot;She leaves.&quot;, &quot;BenHassim2Start&quot;)</tw-passagedata><tw-passagedata pid="76" name="NinaD3Confront2" tags="" position="3925,675" size="100,100">(link-goto:&quot;She leaves without even looking at you.&quot;, &quot;BenHassim2Start&quot;)</tw-passagedata><tw-passagedata pid="77" name="BenHassim2Start" tags="" position="4225,250" size="100,100">14:00 - Alexander Ben Hassim arrives.
+
+&gt; (link-goto: &quot;Oh, hello Alexander.&quot;, &quot;BenHassim2_1&quot;)</tw-passagedata><tw-passagedata pid="78" name="BenHassim2_1" tags="" position="4225,350" size="100,100">Alexander Ben Hassim: I thought a lot about what you told me... and I figured out what to do!
+
+&gt; (link-goto:&quot;That&#39;s wonderful, it&#39;s important to keep busy right now... with everything going on.&quot;, &quot;BenHassim2_2&quot;)</tw-passagedata><tw-passagedata pid="79" name="BenHassim2_2" tags="" position="4225,450" size="100,100">Alexander Ben Hassim: That&#39;s exactly why I organized this group of resistance fighters, to protect civilians like yourself and fight for our freedom. I even had some flyers made, and I want to put them up everywhere so all the young men can do their bit too. Sooo, do you mind if I put up some of my flyers in your window? You would be doing the cause a great service if you accepted my offer.
+
+&gt; (link-goto:&quot;I&#39;m sorry my friend, but I&#39;m an old man, all alone in this shop... and those little flyers of yours are going to paint a target right onto the front of my shop.&quot;, &quot;BenHassim2Refuse&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;It&#39;s not without risk, but I must help out however possible. Yes, you can put them up, but be careful, this is not a game.&quot;, &quot;BenHassim2Accept&quot;)
+</tw-passagedata><tw-passagedata pid="80" name="BenHassim2Accept" tags="" position="4175,550" size="100,100">Alexander Ben Hassim: You are a true brother, and a hero of the people.
+
+(link:&quot;He leaves.&quot;)[
+(set: $HasFlyer to true)
+(go-to:&quot;LunaD3Start&quot;)
+]</tw-passagedata><tw-passagedata pid="81" name="BenHassim2Refuse" tags="" position="4275,550" size="100,100">Alexander Ben Hassim: I understand... No hard feelings, I know your sympathies lie with us, but it was unfair of me to ask so much of you.
+
+(link:&quot;He leaves.&quot;)[
+(set: $HasFlyer to false)
+(go-to:&quot;LunaD3Start&quot;)
+]</tw-passagedata><tw-passagedata pid="82" name="LunaD3Start" tags="" position="4525,250" size="100,100">16:00 - You see Gabi Luna enter. She&#39;s alone and agitated.
+
+Gabi Luna: &quot;Oh help, please help me, you&#39;re my last hope.&quot;
+
+&gt; (link-goto:&quot;Gabi? Why are you crying? And where is Sunny??&quot;, &quot;LunaD3_1&quot;)</tw-passagedata><tw-passagedata pid="83" name="LunaD3_1" tags="" position="4525,350" size="100,100">Gabi Luna: He&#39;s with my neighbour, but it doesn’t matter, they bombed my building, and we have no clean water to make his formula with.... Oh please help, I am so scared.
+
+(if: $AllWaterSold is false)[
+&gt; (link-goto:&quot;Here are some bottles of water, now take a deep breath my dear, we will make it through this together.&quot;, &quot;LunaD3GiveWater&quot;)](else:)[
+&gt; Here are some bottles of water, now take a deep breath my dear, we will make it through this together. &#39;&#39;(You have no more bottled water.)&#39;&#39;
+]
+
+(if: $AllWaterSold is true)[
+&gt; (link-goto:&quot;I am so sorry... I am out of bottled water. Here is some I was keeping for myself today, but you must leave, it&#39;s not safe for a young lady and her baby around these parts.&quot;, &quot;LunaD3NoWater&quot;)](else:)[
+&gt; I am so sorry... I am out of bottled water. Here is some I was keeping for myself today, but you must leave, it&#39;s not safe for a young lady and her baby around these parts. &#39;&#39;(You still have bottled water.)&#39;&#39;
+]
+</tw-passagedata><tw-passagedata pid="84" name="LunaD3GiveWater" tags="" position="4500,450" size="100,100">Gabi Luna: You are my hero, I will always be safe here as long as you are around... I will tell Sunny what you did for us when he is old enough to thank you.
+
+&gt; (link: &quot;You know... Perhaps you would be safer away from all this. The fighting is close now...&quot;)[
+(set: $ToldLunaToLeave to true)
+(go-to:&quot;LunaD3End&quot;)
+]
+
+&gt; (link:&quot;Now, dry your tears my dear, and go be with your son, he must be terrified. I will always be here for you both.&quot;)[
+(set: $ToldLunaToLeave to false)
+(go-to: &quot;LunaD3End&quot;)
+]</tw-passagedata><tw-passagedata pid="85" name="LunaD3NoWater" tags="" position="4600,450" size="100,100">Gabi Luna: But where should I go? I could get killed on the way out, and there is no one to help us.
+
+&gt; (link: &quot;Perhaps you could return to your family in Russia... I&#39;m sure they will be so glad to see you alive and safe that they are sure to accept your son. You must think of what is best for him...&quot;)[
+(set: $ToldLunaToLeave to true)
+(go-to:&quot;LunaD3End&quot;)
+]
+
+&gt; (link:&quot;Maybe I&#39;m overreacting. I&#39;m sure the war will be over soon. We&#39;re a strong people, we&#39;ll endure this !&quot;)[
+(set: $ToldLunaToLeave to false)
+(go-to: &quot;LunaD3End&quot;)
+]</tw-passagedata><tw-passagedata pid="86" name="LunaD3End" tags="" position="4550,550" size="100,100">She says nothing more, thinking about what you said.
+
+(link-goto:&quot;She leaves.&quot;, &quot;AlexandraD3Start&quot;)</tw-passagedata><tw-passagedata pid="87" name="AlexandraD3Start" tags="" position="4850,250" size="100,100">17:00 - Alexandra Bodovora arrives.
+
+&gt; (link-goto: &quot;Good Afternoon Miss Bodovora, you seem in high spirits today.&quot;, &quot;AlexandraD3_1&quot;)</tw-passagedata><tw-passagedata pid="88" name="AlexandraD3_1" tags="" position="4850,375" size="100,100">Alexandra Bodovora: I&#39;m here to celebrate; my son has joined the resistance and I&#39;ve never been so proud of him! Give me everything sweet and any spirits you have left... Tomorrow he will go to war.
+
+(if: $HasFlyer is true)[(She notices the flyer)
+
+Alexandra Bodovora: And I see you too understand the importance of this, congratulations on doing your bit in helping to save our country. These flyers are a wonderful idea.
+
+&gt; (link-goto: &quot;Actually they were made by a good friend of mine, a smart young man named Alexander Ben Hassim that has been searching for his place in this war.&quot;,&quot;AlexandraD3A&quot; )
+](else:)[What do you think, aren&#39;t you proud of my boy?
+
+&gt; (link-goto:&quot;Of course I am... But aren&#39;t you worried for his safety? What if something, god forbid, were to happen to him?&quot;, &quot;AlexandraD3B&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;Your son is the hero we all aspire to be, you must be the proudest of mothers !&quot;, &quot;AlexandraD3C&quot;)
+]</tw-passagedata><tw-passagedata pid="89" name="AlexandraD3A" tags="" position="4800,500" size="100,100">Alexandra Bodovora: Then you must give him all my thanks, for giving my son&#39;s life purpose when he most needed it.
+
+(link-goto: &quot;She pays and leaves.&quot;, &quot;EndDay3&quot;)</tw-passagedata><tw-passagedata pid="90" name="AlexandraD3B" tags="" position="4900,500" size="100,100">Alexandra Bodovora: My son will come back a hero, or not at all. Don&#39;t worry, I know he is brave, and I pray everyday to keep him safe.
+
+(link-goto: &quot;She pays and leaves.&quot;, &quot;EndDay3&quot;)</tw-passagedata><tw-passagedata pid="91" name="AlexandraD3C" tags="" position="5000,500" size="100,100">Alexandra Bodovora: I am... But secretly I am so worried that those beasts might hurt my dear baby. I will be happiest when this is all over and he is returned to me.
+
+(link-goto: &quot;She pays and leaves.&quot;, &quot;EndDay3&quot;)</tw-passagedata><tw-passagedata pid="92" name="EndDay3" tags="" position="5250,275" size="100,100">As the day comes to a close, you can hear the combat continue in the distance. You call your daughter, in Berlin. She is safe. She begs you to come join her.
+
+You think about your shop. (if: $extra_refill is false)[Your stocks are dwindling.](else:)[You still have some stock, but it won&#39;t last forever.] The people here need you.
+
+
+&gt; (link-goto: &quot;Leave Ukraine.&quot;, &quot;LeaveUkraine&quot;)
+&lt;br&gt;
+&gt; (link-goto: &quot;Stay&quot;, &quot;Day4Start&quot;)</tw-passagedata><tw-passagedata pid="93" name="LeaveUkraine" tags="" position="5350,0" size="100,100">You chose to leave Ukraine and flee the war, like millions of other refugees.
+
+
+(link-goto: &quot;End.&quot;, &quot;Start&quot;)</tw-passagedata><tw-passagedata pid="94" name="Day4Start" tags="" position="5500,275" size="100,100">**28 february 2022**
+
+Since yesterday, the Russians have advanced into Irpin. You&#39;ve been sleeping in the basement for weeks, it helps you feel safe. You can hear the fighting going on all around. You haven&#39;t seen any soldiers yet, but you know they are close.
+
+(set: $betrayedBenHassim to false)
+&gt; (link: &quot;Open the shop as usual.&quot;)[
+(go-to: &quot;Day4StartOpen&quot;)
+]
+&lt;br&gt;
+&gt; (link: &quot;Stay put.&quot;)[
+(go-to: &quot;Day4StartClosed&quot;)
+]</tw-passagedata><tw-passagedata pid="95" name="Day4StartClosed" tags="" position="5450,400" size="100,100">You stay in the basement, decided to wait it out. You have enough to eat and drink for a little while.
+
+However, you quickly hear banging on the front door.
+
+(link-goto: &quot;Go upstairs.&quot;, &quot;Day4StartClosed_2&quot;)</tw-passagedata><tw-passagedata pid="96" name="Day4StartOpen" tags="" position="5550,400" size="100,100">As you open the door, you see Vlad, out of breath, rushing towards you. He pushes you inside and closes the door.
+
+Vlad: What is wrong with you? The Russians are here! You can’t be open today!
+
+&gt; (link-goto:&quot;I guess you are right... Your Russian friends are causing quite a ruckus outside, huh?&quot;, &quot;VladD41&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;My door has always been open, no matter what is going on out there. I’m not going to start disappointing my regulars when they need me most.&quot;, &quot;VladD41&quot;)</tw-passagedata><tw-passagedata pid="97" name="Day4StartClosed_2" tags="" position="5450,500" size="100,100">As you approach the door, you see it&#39;s your friend Vlad.
+
+Vlad: Open ! Quick ! The Russians are here !
+
+&gt; (link-goto: &quot;Your Russian friends are causing quite a ruckus outside, huh?&quot;, &quot;VladD41&quot;)</tw-passagedata><tw-passagedata pid="98" name="VladD41" tags="" position="5500,625" size="100,100">Vlad: ... What about a nice game of cards instead of that discussion? No one is coming in today anyhow. C’mon, I’ll let you start.
+
+(link-goto: &quot;Play cards with Vlad in the basement.&quot;, &quot;VladD42&quot;)</tw-passagedata><tw-passagedata pid="99" name="VladD42" tags="" position="5500,725" size="100,100">The hours pass. You almost forget what&#39;s going on up there.
+
+Vlad: Pass me another bottle now, will you?
+
+&gt; (link-goto: &quot;Vlad, aren’t you worried at all?&quot;, &quot;VladD43&quot;)</tw-passagedata><tw-passagedata pid="100" name="VladD43" tags="" position="5500,825" size="100,100">Vlad: Look... I know things seem bad right now... But they’re just here to help us straighten things out, you know.
+
+&gt; (link-goto: &quot;And what if they don’t want to leave?&quot;, &quot;VladD44&quot;)</tw-passagedata><tw-passagedata pid="101" name="VladD44" tags="" position="5500,925" size="100,100">Vlad: Psssch, of course they’ll leave! I know a thing or two about politics.
+
+&gt; (link-goto:&quot;I hope you’re right... They don’t look like they want to leave. What if they don’t?&quot;, &quot;VladD4A&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;I sure hope you’re right! I won’t be open much longer if this goes on, and I can’t imagine how tragic that would be for you.&quot;, &quot;VladD4B&quot;)</tw-passagedata><tw-passagedata pid="102" name="VladD4A" tags="" position="5425,1050" size="100,100">Vlad: Then we will keep living like this! Besides we’re perfectly safe right here.
+
+[...]
+
+Vlad: Are you thinking of leaving? Joining that ungrateful daughter of yours all the way in Berlin?
+
+(link-goto:&quot;Bah... This is my home. Besides... I’m not sure she really wants me around.  How about you? Any family outside of here?&quot;, &quot;VladD4A2&quot;)</tw-passagedata><tw-passagedata pid="103" name="VladD4B" tags="" position="5550,1050" size="100,100">Vlad: Too true, I’d lose my best friend and my favorite liquor shop all at once. Now hand me another, a toast to resilience!
+
+As you toast, you hear loud banging on the front door again.
+
+(link-goto:&quot;Go upstairs.&quot;, &quot;D4Interruption&quot;)</tw-passagedata><tw-passagedata pid="104" name="VladD4A2" tags="" position="5425,1150" size="100,100">Vlad: You know, it’s just you and me brother. This place is my family, I’d never leave it.
+
+As he finishes his sentence, you hear loud banging on the front door again.
+
+(link-goto:&quot;Go upstairs.&quot;, &quot;D4Interruption&quot;)</tw-passagedata><tw-passagedata pid="105" name="D4Interruption" tags="" position="5475,1275" size="100,100">As you begin to emerge from the basement, you hear a crashing noise. You cautiously approach the shop&#39;s entrance.
+
+Five Russian soldiers stand in your shop, picking what they might from your stalls.
+
+&gt; (link-goto:&quot;Hey, you broke my door!&quot;, &quot;SoldiersConfront&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;Welcome to my humble corner shop, what might I get you?&quot;, &quot;SoldiersConfront&quot;)</tw-passagedata><tw-passagedata pid="106" name="SoldiersConfront" tags="" position="5475,1375" size="100,100">(if: $HasFlyer is true)[Soldier: We come all the way to help you people and this is the thanks we get? Don’t think we haven’t noticed your little terrorist flyer.
+
+&gt; (link-goto: &quot;It’s a misunderstanding, I promise! A young man asked me if he could advertise his club in my window... Of course if I had seen what it says, I would have removed it straight away and given him a good talking to. Please, take anything you need, I insist.&quot;, &quot;SoldiersAppease&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;How dare you ! Get out of my shop this instant.&quot;, &quot;SoldiersConfront2&quot;)
+](else:)[Soldier: Apologies for the mess, sir. Our troops were in need of some vital goods... And a bottle or two. We thank you for your cooperation.
+
+He fails to hide a smirk.
+
+(link-goto:&quot;Watch in silence as they take what they want from your shop.&quot;, &quot;EndInterruptionSafe&quot;)
+]
+</tw-passagedata><tw-passagedata pid="107" name="SoldiersAppease" tags="" position="5450,1500" size="100,100">Soldier: A misunderstanding eh? Then you won’t mid telling us who this young man is, so we can go... educate him.
+(set: $beatUp to 0)
+&gt; (link-goto: &quot;I don’t remember his name.&quot;, &quot;InterrogationLie&quot;)
+&lt;br&gt;
+&gt; (link: &quot;...His name is Ben Hassim.&quot;)[
+(set: $betrayedBenHassim to true)
+(go-to:&quot;EndInterruptionSafe&quot;)
+]</tw-passagedata><tw-passagedata pid="108" name="EndInterruptionPassOut" tags="" position="5400,1775" size="100,100">You wake up in pain. The cold neon light of your basement blinds you.
+
+Vlad: You’re finally awake! What did those awful rioters do to you? I head a loud noise and came up straight away!  I found you on the ground, unconscious. I was afraid... you wouldn’t wake up.
+(set: $passedOut to true)
+&gt; (link-goto: &quot;Rioters, Vlad? Is that what you think? I was lucky enough to receive a visit from our lovely Russian allies. Your friends up there took everything I had left...&quot;, &quot;Looters1&quot;)</tw-passagedata><tw-passagedata pid="109" name="EndInterruptionSafe" tags="" position="5675,1775" size="100,100">The soldiers finally leave. Your store is in bad shape, but at least you&#39;re safe. As you&#39;re contemplating the situation, you hear Vlad&#39;s voice from the stairwell.
+
+Vlad: What happened up there?
+(set: $passedOut to false)
+&gt; (link-goto: &quot;Some soldiers showed up and stole everything I had left...they didn’t hurt me, but I’m completely ruined now.&quot;, &quot;Safe1&quot;)</tw-passagedata><tw-passagedata pid="110" name="SoldiersConfront2" tags="" position="5325,1500" size="100,100">Soldier: Or what, old man? C’mon boys, let’s teach this idiot a lesson about talking back.
+
+(link-goto:&quot;The soldiers beat you up until you pass out.&quot;, &quot;EndInterruptionPassOut&quot;)</tw-passagedata><tw-passagedata pid="111" name="InterrogationLie" tags="" position="5450,1625" size="100,100">Soldier: Are you sure? It would be a shame if you were lying to us.
+
+(link-goto: &quot;He hits you.&quot;, &quot;AfterHit&quot;)
+</tw-passagedata><tw-passagedata pid="112" name="AfterHit" tags="" position="5575,1625" size="100,100">Soldier: Now let&#39;s try this again: give us the boy&#39;s name.
+(set: $beatUp to $beatUp + 1)(if: $beatUp &gt; 5)[
+You want it to stop.
+](else-if: $beatUp is 5)[
+You want it to stop.
+](else-if: $beatUp is 4)[
+It hurts a lot.
+](else-if: $beatUp is 3)[
+It hurts.
+](else-if: $beatUp is 2)[
+You fall to the ground.
+](else:)[&lt;br&gt;
+](if: $beatUp &gt; 5)[
+(link-goto:&quot;Pass out.&quot;, &quot;EndInterruptionPassOut&quot;)
+](else-if: $beatUp &gt; 4)[
+&gt; (link: &quot;His name is Ben Hassim.&quot;)[
+(set: $betrayedBenHassim to true)
+(go-to:&quot;EndInterruptionBeatUp&quot;)
+]&lt;br&gt;
+&gt; (link-goto: &quot;I don&#39;t remember his name.&quot;, &quot;InterrogationLie&quot;)
+](else:)[&gt; (link-goto: &quot;I don&#39;t remember his name.&quot;, &quot;InterrogationLie&quot;)
+&lt;br&gt;
+&gt; (link: &quot;...His name is Ben Hassim.&quot;)[
+(set: $betrayedBenHassim to true)
+(go-to:&quot;EndInterruptionBeatUp&quot;)
+]
+]</tw-passagedata><tw-passagedata pid="113" name="Safe1" tags="" position="5675,1900" size="100,100">Vlad: They took everything? Even the vodka? And the cigarettes... you must have something left for your old pal Vladdy?
+
+(if: $betrayedBenHassim is true)[
+&gt; (link-goto:&quot;How can you think about such a thing right now? I betrayed my friend, they are going to hurt Ben, and it’s all my fault...&quot;, &quot;BetrayedSafe&quot;)
+]
+&gt; (link-goto:&quot;How can you think about such a thing right now? My store is in shambles... I&#39;m ruined !&quot;, &quot;Ruined&quot;)
+</tw-passagedata><tw-passagedata pid="114" name="EndInterruptionBeatUp" tags="" position="5525,1775" size="100,100">The soldiers finally leave. Your whole body hurts, and they still took whatever they wanted. As you&#39;re contemplating the situation, you hear Vlad&#39;s voice from the stairwell.
+
+Vlad: What happened up there?
+(set: $passedOut to false)
+&gt; (link-goto: &quot;Some soldiers showed up and stole everything I had left... They beat me up, and I’m completely ruined now.&quot;, &quot;Looters1&quot;)
+
+&gt; (link-goto: &quot;I betrayed my friend... And they still stole everything.&quot;, &quot;BetrayedBeatUp&quot;)
+</tw-passagedata><tw-passagedata pid="115" name="Looters1" tags="" position="5400,1900" size="100,100">Vlad: Are you sure? Y’know, maybe you were mistaken... I heard on the news that violent looters are roaming the streets.
+
+&gt; (link-goto: &quot;Are you blind or just drunk? You know as well as I do who those men were. Well Vlad, do you feel protected? Is all this what you wanted all along?&quot;, &quot;Looters2&quot;)</tw-passagedata><tw-passagedata pid="116" name="Looters2" tags="" position="5400,2000" size="100,100">Vlad: Look, politics are one thing... What those brutes did to you is quite another. I promise you, you are my friend, and anyone who comes after my friend is my enemy forever. Besides, hurting an unarmed civilians is unbecoming of any man... I am truly sorry.
+
+&gt; (link-goto: &quot;That’s a lovely sentiment, but my shop is ransacked, completely destroyed. I&#39;m ruined.&quot;, &quot;Ruined&quot;)</tw-passagedata><tw-passagedata pid="117" name="BetrayedSafe" tags="" position="5675,2050" size="100,100">Vlad: War is hell. At least you are okay. Besides, I never did like that Ben Hassim character, he’s a real know it all.
+
+&gt; (link-goto: &quot;He doesn’t deserve to die... How can you be so cold ?&quot;, &quot;Drink1&quot;)</tw-passagedata><tw-passagedata pid="118" name="Drink1" tags="" position="5675,2175" size="100,100">Vlad: As I said, war is hell. You didn’t deserve to be looted(if:$beatUp &gt; 0)[ and beat up], but I know how to deal with all this ugliness. Look, I hid some vodka down here, behind your fridge... y’know, for emergencies.
+
+&gt; (link-goto:&quot;What is wrong with you? The world is ending around us, we are surrounded by enemies, and you want to open another bottle!?&quot;, &quot;Drink2&quot;)</tw-passagedata><tw-passagedata pid="119" name="Drink2" tags="" position="5525,2300" size="100,100">Vlad: Listen to me. When your life imploding on itself, there is no better cure than a deck of cards, a large bottle and a friendly face! Come, let’s keep living how we’ve always lived, until we can’t anymore.
+
+&gt; (link-goto:&quot;Do you really want to live like this?&quot;, &quot;Drink3&quot;)</tw-passagedata><tw-passagedata pid="120" name="BetrayedBeatUp" tags="" position="5550,2025" size="100,100">Vlad: War is hell. At least you&#39;re alive. Besides, I never did like that Ben Hassim character, he’s a real know it all.
+
+&gt; (link-goto: &quot;He doesn’t deserve to die... How can you be so cold ?&quot;, &quot;Drink1&quot;)</tw-passagedata><tw-passagedata pid="121" name="Ruined" tags="" position="5450,2150" size="100,100">Vlad: War is hell. You didn’t deserve to be looted(if:$beatUp &gt; 0)[ and beat up], but I know how to deal with all this ugliness. Look, I hid some vodka down here, behind your fridge... y’know, for emergencies.
+
+&gt; (link-goto:&quot;What is wrong with you? The world is ending around us, we are surrounded by enemies, and you want to open another bottle!?&quot;, &quot;Drink2&quot;)</tw-passagedata><tw-passagedata pid="122" name="Drink3" tags="" position="5525,2400" size="100,100">Vlad: This is where you belong. besides, who will I play against if you leave?
+
+&gt; (link-goto:&quot;But my shop is destroyed... there is nothing left for me here. I’m thinking of leaving...&quot;, &quot;Drink4&quot;)</tw-passagedata><tw-passagedata pid="123" name="Drink4" tags="" position="5525,2500" size="100,100">Vlad: *Na zdoróvʹje* my friend, to whatever path you choose.
+
+&gt; (link-goto: &quot;Na zdoróvʹje, my friend...&quot;, &quot;EndDay4&quot;)</tw-passagedata><tw-passagedata pid="124" name="EndDay4" tags="" position="5850,275" size="100,100">&gt; (link-goto: &quot;Leave Ukraine.&quot;, &quot;LeaveUkraine&quot;)
+&lt;br&gt;
+&gt; (link-goto: &quot;Stay&quot;, &quot;Day5Start&quot;)</tw-passagedata><tw-passagedata pid="125" name="Day5Start" tags="" position="6050,275" size="100,100">**3rd march 2022**
+
+After the violent combats all around the shop, the ukrainian army managed to push the Russian forces out of Irpin and Bucha. They discover the massacre that unfolded there.
+
+Your neighborhood is almost unrecognizable. The house across the street was destroyed with an artillery shell. It could have been you.
+
+You&#39;re busy repairing the door of your shop, when you see Mikhail Kovalenko arrive.
+
+&gt; (link-goto:&quot;Good day, how are you doing?&quot;, &quot;MikhailD51&quot;)</tw-passagedata><tw-passagedata pid="126" name="MikhailD51" tags="" position="6050,400" size="100,100">Mikhail Kovalenko: My...my family is gone! They ran off to Poland in the middle of the night, my wife had warned me but ooh I didn’t listen and now they’re gone, gone! What have I done? I swore I would protect them and now... now I can’t. I choose this... I... I  choose to stay. I’m a monster, aren’t I?
+
+&gt; (link-goto: &quot;You made a difficult decision, but your family will thank you when this is all over, and they have a home to come back to.&quot;, &quot;MikhailD5Appease&quot;)
+&lt;br&gt;
+&gt; (link-goto: &quot;You are not a monster. But I have to ask... Why are you still here? If you know where they are, maybe you should join them.&quot;, &quot;MikhailD5Question&quot;)</tw-passagedata><tw-passagedata pid="127" name="MikhailD5Appease" tags="" position="5975,525" size="100,100">Mikhail Kovalenko: Do you think they will come back?
+
+&gt; (link-goto: &quot;Of course they will. And you will be a hero to them and your country! There is no dishonour in having your family stay somewhere safe whilst you fight for their freedom, that is what men have been doing since the dawn of time.&quot;, &quot;MikhailD5End&quot;)</tw-passagedata><tw-passagedata pid="128" name="MikhailD5Question" tags="" position="6100,525" size="100,100">Mikhail Kovalenko: This is my home, this is the land of my father, and his father before him. I will not bring shame upon my ancestors.
+
+&gt; (link-goto: &quot;Mikhail... You are a proud man, and a strong one, but it wouldn&#39;t be shameful to protect oneself.&quot;, &quot;MikhailD5Question2&quot;)</tw-passagedata><tw-passagedata pid="129" name="MikhailD5Question2" tags="" position="6100,650" size="100,100">Mikhail Kovalenko: I’ll fight till the end, whatever the odds.
+
+&gt; (link-goto: &quot;I understand you, but do you really want to leave your family alone ?&quot;, &quot;MikhailD5End&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;Good luck, Mikhail. You&#39;re a hero.&quot;, &quot;MikhailD5End&quot;)</tw-passagedata><tw-passagedata pid="130" name="MikhailD5End" tags="" position="6025,775" size="100,100">Mikhail looks at you and nods.
+
+(link-goto: &quot;He leaves.&quot;, &quot;AlexandraD5Start&quot;)</tw-passagedata><tw-passagedata pid="131" name="AlexandraD5Start" tags="" position="6375,300" size="100,100">10:00 - You see Alexandra Bodovora arrive. She looks devastated.
+
+
+Alexandra Bodovora: He is dead. My son is dead.
+
+&gt; (link-goto: &quot;Oh dear, what happened?&quot;, &quot;AlexandraD51&quot;)</tw-passagedata><tw-passagedata pid="132" name="AlexandraD51" tags="" position="6375,425" size="100,100">Alexandra Bodovora: They were preparing for an ambush, then the fighting began... they say it was over before it even began, that they shot right through his lung. He would have fought for his country and died alone, suffocating in the mud! Those monsters shot him before he even got a chance to fight... to live...
+
+&gt; (link-goto: &quot;Death is always ugly, but your son was a true hero, and his name will not be forgotten. You have given us the greatest gift and most bitter sacrifice, I cannot begin to thank you enough, or comprehend your sorrow.&quot;, &quot;AD5A&quot;)
+&lt;br&gt;
+&gt; (link-goto:&quot;It is a tragedy... A horrible, meaningless loss. All my condolences.&quot;, &quot;AD5B&quot;)</tw-passagedata><tw-passagedata pid="133" name="AD5A" tags="" position="6325,550" size="100,100">Alexandra Bodovora: Thank you. Not many people understand. I will live for him; keep fighting for what he believed in, that way he will be with us always.
+
+&gt; (link-goto: &quot;As long as our nation is alive, then those whose sacrifice have forged it will live on. *Slava Ukraini*&quot;, &quot;AlexandraD5Understand&quot;)</tw-passagedata><tw-passagedata pid="134" name="AD5B" tags="" position="6450,550" size="100,100">Alexandra Bodovora: He died a noble death, he’s a hero... Of course I am sad, but also proud. My son is an innocent, I will fight for him until my last breath.
+
+&gt; (link-goto: &quot;I cannot understand your pain, but I implore you to rethink your decision to stay here... please Alexandra, you don’t deserve to die too. They&#39;re still evacuating civilians... There may not be another chance.&quot;, &quot;AlexandraD5ProposeLeave&quot;)
+&lt;br&gt;
+&gt; (link-goto: &quot;I understand. Whatever may come, good luck.&quot;, &quot;AlexandraD5Understand&quot;)</tw-passagedata><tw-passagedata pid="135" name="AlexandraD5ProposeLeave" tags="" position="6450,675" size="100,100">Alexandra Bodovora: My memories live here... They took my son, but I won’t let them take my home. Good luck, and may we meet again.
+
+(link-goto: &quot;She leaves.&quot;, &quot;LunaD5Start&quot;)</tw-passagedata><tw-passagedata pid="136" name="AlexandraD5Understand" tags="" position="6325,675" size="100,100">Alexandra Bodovora: Thank you. Good luck to you, and may we meet again.
+
+(link-goto: &quot;She leaves.&quot;, &quot;LunaD5Start&quot;)</tw-passagedata><tw-passagedata pid="137" name="LunaD5Start" tags="" position="6700,300" size="100,100">12:00 - You see Gabi Luna arrive.
+
+
+&gt; (link-goto:&quot;I’m so relieved to see you again. I thought... well when they came... I’m just so glad you and Sunny are alive.&quot;, &quot;LunaD51&quot;)</tw-passagedata><tw-passagedata pid="138" name="LunaD51" tags="" position="6700,425" size="100,100">Gabi Luna: Thank you, it’s been really scary for him... and me.
+
+&gt; (link-goto:&quot;I understand. What can I do for you?&quot;, &quot;LunaD52&quot;)</tw-passagedata><tw-passagedata pid="139" name="LunaD52" tags="" position="6700,550" size="100,100">Gabi Luna: Actually, I wanted to come by to thank you for helping me out, and to ask you if you wanted to come with us.
+
+&gt; (link-goto: &quot;Come with you? Where to?&quot;, &quot;LunaD53&quot;)</tw-passagedata><tw-passagedata pid="140" name="LunaD53" tags="" position="6700,650" size="100,100">Gabi Luna: Anywhere but here. There’s a group of us leaving tonight, please say you’ll join us.
+
+&gt; (link-goto:&quot;But what about my shop? My whole life is here.&quot;, &quot;LunaD54&quot;)</tw-passagedata><tw-passagedata pid="141" name="LunaD54" tags="" position="6700,750" size="100,100">Gabi Luna: Look around you, everything is destroyed... Haven’t you heard what happened to Stefan Bodovora? And my building came down a few days ago, and they are still counting the dead! We&#39;re lucky to be alive.
+
+&gt; (link-goto: &quot;I have to stay for the survivors, whatever may come. It’s small, but my duty is to this neighbourhood, doing my part as long as I can.&quot;, &quot;LunaD55&quot;)</tw-passagedata><tw-passagedata pid="142" name="LunaD55" tags="" position="6700,850" size="100,100">Gabi Luna: I know, it&#39;s a difficult decision to make. Take your time, but the bus leaves tonight. I hope this isn&#39;t goodbye...
+
+(link-goto:&quot;She smiles and leaves.&quot;, &quot;VladD5Start&quot;)</tw-passagedata><tw-passagedata pid="143" name="VladD5Start" tags="" position="6900,300" size="100,100">It&#39;s a difficult choice to make. Luckily, a distraction appears in the shape of Vlad.
+
+Vlad: Good day my friend! The sun is beautiful this afternoon!
+
+&gt; (link-goto: &quot;Hello Vlad. Miss Gabi came by earlier, she’s going to leave... do you think we are doing the right thing staying here? What if the Russians come back?&quot;, &quot;VladD51&quot;)</tw-passagedata><tw-passagedata pid="144" name="VladD51" tags="" position="6900,400" size="100,100">Vlad: Then we will face them again! Oh you worry too much, our troubles are behind us now... Besides tomorrow is restocking day, your shop will be back to normal in no time. I&#39;m sure Lenny will have a deal for you.
+
+&gt; (link-goto: &quot;Yes... you may be right.&quot;, &quot;VladD5End&quot;)
+&lt;br&gt;
+&gt; (link-goto: &quot;I don&#39;t know.&quot;, &quot;VladD5End&quot;)</tw-passagedata><tw-passagedata pid="145" name="VladD5End" tags="" position="6900,500" size="100,100">Vlad: I see you&#39;re undecided. I&#39;ll come back later, but do say goodbye if you leave, my friend. I&#39;ll be sad to see you go.
+
+(link-goto: &quot;He leaves.&quot;, &quot;End&quot;)
+
+</tw-passagedata><tw-passagedata pid="146" name="End" tags="" position="7125,300" size="100,100">&gt; (link-goto: &quot;Leave Ukraine.&quot;, &quot;LeaveUkraine&quot;)
+&lt;br&gt;
+&gt; (link-goto: &quot;Stay&quot;, &quot;EndStay&quot;)</tw-passagedata><tw-passagedata pid="147" name="EndStay" tags="" position="7275,300" size="100,100">You join Vlad at his place.
+
+Vlad: &quot;Ah, my friend, come to say goodbye ?&quot;
+
+&gt; (link-goto: &quot;I&#39;m staying. Let&#39;s raise a glass to the new normal. There is plenty to do here.&quot;, &quot;EndStay2&quot;)</tw-passagedata><tw-passagedata pid="148" name="EndStay2" tags="" position="7400,300" size="100,100">The war is far from over. The threat of missiles and bombs still looms over your head, but you managed to keep your spirits high. You don&#39;t know what the future holds, but you will help rebuild it.
+
+(link-goto: &quot;The end.&quot;, &quot;Start&quot;)</tw-passagedata><tw-passagedata pid="149" name="Start2" tags="" position="600,300" size="100,100">**22 february 2022**
+
+6:30 - You hear knocks on the door.
+
+(set: $stock to 50)
+
+(link-goto: &quot;Open the door&quot;, &quot;VladStart&quot;)</tw-passagedata></tw-storydata>
+
