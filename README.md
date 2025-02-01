@@ -2,6 +2,8 @@
 
 An interactive fiction experience that puts you in the shoes of a shopkeeper in Irpin, Ukraine, during the Russian invasion in February 2022. This project was created as part of the Interactive Fiction class given by Isaac Pante (SLI, UNIL).
 
+[Play the game on itch.io!](https://florianrieder.itch.io/i-think-its-time-to-leave)
+
 ![Image](https://github.com/user-attachments/assets/2be0ad3d-8bad-4175-ba33-acd1eefb7804)
 
 ## Overview
