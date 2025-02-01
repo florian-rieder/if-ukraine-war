@@ -1,4 +1,4 @@
-# Ukraine Shopkeeper
+# I think it's time to leave
 
 An interactive fiction experience that puts you in the shoes of a shopkeeper in Irpin, Ukraine, during the Russian invasion in February 2022. This project was created as part of the Interactive Fiction class given by Isaac Pante (SLI, UNIL).
 
